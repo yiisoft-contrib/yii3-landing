@@ -1,0 +1,4 @@
+/* Buttons */
+.btn {
+	@apply relative inline-flex items-center justify-center gap-x-2.5 rounded-[3rem] px-8 py-4 text-center text-base font-semibold leading-[1.6] transition-all md:px-10 md:py-5 md:text-xs 2xl:px-12 2xl:py-6;
+}

@@ -1,0 +1,51 @@
+/* General CSS */
+::selection {
+	@apply bg-black text-white;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	@apply scroll-smooth;
+}
+
+body {
+	@apply text-lightgray relative overflow-x-hidden bg-white;
+	min-width: 320px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	@apply inline-block transition-all;
+}
+
+p + p {
+	@apply mt-4;
+}
+
+b,
+strong {
+	@apply font-semibold;
+}
+
+button {
+	@apply transition-all;
+}
+
+svg {
+	@apply flex-shrink-0;
+}
+
+pre {
+	@apply max-w-full overflow-auto;
+}
+
+section {
+	@apply relative;
+}

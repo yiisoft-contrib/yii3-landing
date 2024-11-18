@@ -1,0 +1,36 @@
+/* Images */
+.img-cover,
+.img-scale {
+  @apply overflow-hidden block;
+
+  img {
+    @apply w-full h-full;
+  }
+}
+.img-cover img {
+  @apply object-cover;
+}
+.img-scale img {
+  @apply object-scale-down;
+}
+
+@media (min-width: 960px) {
+  .img-animated {
+    &,
+    [class*='-photo'] {
+      img {
+        transform: scale(1.01);
+        transition: transform 0.5s;
+      }
+    }
+
+    &:hover {
+      &,
+      [class*='-photo'] {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
