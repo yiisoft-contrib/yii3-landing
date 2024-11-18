@@ -1,4 +1,8 @@
 /* General CSS */
+[x-cloak] {
+	@apply !hidden;
+}
+
 ::selection {
 	@apply bg-black text-white;
 }
@@ -22,7 +26,7 @@ body {
 }
 
 a {
-	@apply inline-block transition-all;
+	@apply inline-block text-black transition-all hover:text-blue;
 }
 
 p + p {
@@ -39,7 +43,7 @@ button {
 }
 
 svg {
-	@apply flex-shrink-0;
+	@apply flex-shrink-0 fill-current;
 }
 
 pre {

@@ -1,4 +1,20 @@
 /* Buttons */
 .btn {
-	@apply relative inline-flex items-center justify-center gap-x-2.5 rounded-[3rem] px-8 py-4 text-center text-base font-semibold leading-[1.6] transition-all md:px-10 md:py-5 md:text-xs 2xl:px-12 2xl:py-6;
+	@apply relative inline-flex items-center justify-center gap-x-2.5 rounded-5xl px-6 py-4 text-center text-base font-normal transition-all;
+}
+
+/* Themes */
+.btn-gradient {
+	@apply text-white hover:text-white;
+	background: linear-gradient(90deg, #83c933 0%, #59cb58 14.29%, #1ecb79 28.57%, #00c997 42.86%, #00c5b1 57.14%, #00c0c5 71.43%, #00bad2 85.71%, #40b3d8 100%);
+	background-size: 100%;
+
+	&:hover {
+		background-size: 500%;
+	}
+}
+
+/* Sizes */
+.btn-sm {
+	@apply px-5 py-3;
 }

@@ -11,9 +11,9 @@
 /* Tailwind Utilities */
 @import "tailwindcss/utilities";
 
-/* Modules */
-@import "modules/header.css";
-@import "modules/footer.css";
+/* Layout */
+@import "layout/header.css";
+@import "layout/footer.css";
 
 /* Pages */
-@import "pages/home.css";
+/* @import "pages/home.css"; */
