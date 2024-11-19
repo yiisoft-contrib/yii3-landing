@@ -15,12 +15,13 @@ window.Alpine = Alpine
 /* Document ready */
 document.addEventListener("DOMContentLoaded", () => {
 	const featuresContentSwiper = new Swiper(".features-content", {
-		modules: [Autoplay, Pagination],
+		modules: [Autoplay, Pagination, Controller],
 		slidesPerView: 1,
 		spaceBetween: 32,
-		// autoHeight: true,
+		autoHeight: true,
 		// autoplay: {
 		// 	delay: 5000,
+		// 	pauseOnMouseEnter: true,
 		// },
 		allowTouchMove: false,
 		pagination: {
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 
 	const featuresTabsSwiper = new Swiper(".features-tabs", {
-		modules: [Controller, Scrollbar],
+		modules: [Scrollbar, Controller],
 		slidesPerView: 1.3,
 		spaceBetween: 16,
 		slideToClickedSlide: true,
@@ -56,15 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			el: ".features-tabs-scrollbar",
 		},
 		grabCursor: true,
-		controller: {
-			control: featuresContentSwiper,
-		},
 		breakpoints: {
 			720: {
 				slidesPerView: 1.5,
 			},
 		},
 	})
+
+	featuresContentSwiper.controller.control = featuresTabsSwiper
+	featuresTabsSwiper.controller.control = featuresContentSwiper
 })
 
 /* Alpine.js */

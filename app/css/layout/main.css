@@ -10,3 +10,14 @@
 .section-title {
 	@apply text-3xl font-bold sm:text-4xl xl:text-5xl;
 }
+
+.section-descr {
+	@apply mt-3;
+
+	p {
+		b,
+		strong {
+			@apply font-bold text-black dark:text-white;
+		}
+	}
+}

@@ -145,7 +145,7 @@
 			@apply relative cursor-pointer py-3 lg:pl-8 xl:pl-11;
 
 			.progress {
-				@apply absolute -left-[2px] top-0 z-1 h-full w-[5px] bg-[#E7E7E7] opacity-0 transition-opacity;
+				@apply invisible absolute -left-[2px] top-0 z-1 h-full w-[5px] bg-[#E7E7E7];
 
 				&-thumb {
 					@apply absolute inset-x-0 top-0 z-2 h-full origin-top scale-y-0 bg-green transition-transform;
@@ -179,7 +179,7 @@
 				@apply cursor-default;
 
 				.progress {
-					@apply opacity-100;
+					@apply visible;
 
 					&-thumb {
 						animation: featureProgress var(--animation-duration) linear both;
@@ -227,7 +227,7 @@
 		@apply max-w-full lg:col-span-7 lg:col-start-6;
 
 		.prose {
-			@apply max-w-full;
+			@apply dark:text-gray max-w-full text-lightgray;
 		}
 
 		.code {
@@ -255,6 +255,75 @@
 						@apply block max-h-96;
 					}
 				}
+			}
+		}
+	}
+}
+
+/* Section: Technologies */
+.technologies {
+	@apply pt-16 md:pt-3;
+
+	&-header {
+		@apply relative mb-4 flex items-center justify-between md:-mb-10 lg:-mb-20;
+
+		&-picture {
+			@apply pointer-events-none relative -z-1 hidden h-52 select-none md:block lg:h-80 2xl:h-[25rem];
+		}
+	}
+
+	&-item {
+		@apply grid grid-cols-1 gap-x-8 gap-y-6 py-6 md:grid-cols-[auto,1fr] md:py-8;
+
+		.ready {
+			@apply md:w-52 lg:w-64 xl:w-80 2xl:w-[22.75rem];
+
+			&-value {
+				@apply inline-block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl;
+			}
+		}
+
+		.heading {
+			&-title {
+				@apply text-xl font-bold lg:text-2xl;
+			}
+
+			&-descr {
+				@apply mt-3;
+			}
+		}
+
+		&:not(:last-child) {
+			@apply border-b border-stroke-light dark:border-stroke-dark;
+		}
+
+		&:nth-child(1) {
+			.ready-value {
+				background: linear-gradient(90deg, #83c933 0%, #00c7a5 25%, #40b3d8 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+		}
+
+		&:nth-child(2) {
+			.ready-value {
+				background: linear-gradient(90deg, #83c933 0%, #00c7a5 50%, #40b3d8 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+		}
+
+		&:nth-child(3) {
+			.ready-value {
+				background: linear-gradient(90deg, #83c933 0%, #00c7a5 75%, #40b3d8 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
 			}
 		}
 	}

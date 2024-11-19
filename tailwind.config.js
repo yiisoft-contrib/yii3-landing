@@ -30,6 +30,9 @@ module.exports = {
 				blue: {
 					DEFAULT: "#40B3D8",
 				},
+				gray: {
+					DEFAULT: "#A3A5AD",
+				},
 				lightgray: "#87888C",
 				body: "#141518",
 				stroke: {
