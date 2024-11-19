@@ -3,6 +3,10 @@
 	@apply pt-16 sm:pt-24 xl:pt-36;
 }
 
+.section-heading {
+	@apply mb-10 lg:mb-12;
+}
+
 .section-title {
 	@apply text-3xl font-bold sm:text-4xl xl:text-5xl;
 }

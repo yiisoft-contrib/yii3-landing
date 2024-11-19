@@ -53,7 +53,7 @@
 	@apply overflow-x-hidden;
 
 	&-heading {
-		@apply mb-10 text-center lg:mb-12;
+		@apply text-center;
 
 		.title {
 			@apply inline-block text-4xl font-bold sm:text-5xl xl:text-6xl;
@@ -92,6 +92,10 @@
 
 		.description {
 			@apply mt-3;
+
+			ul {
+				@apply list-disc pl-6;
+			}
 		}
 
 		&--orange {
@@ -120,6 +124,136 @@
 
 				> svg {
 					@apply fill-blue;
+				}
+			}
+		}
+	}
+}
+
+/* Section: Features */
+.features {
+	@apply overflow-x-hidden;
+
+	&-wrapper {
+		@apply lg:grid lg:grid-cols-12 lg:gap-x-12;
+	}
+
+	&-nav {
+		@apply relative col-span-5 hidden gap-x-6 self-start lg:grid lg:before:absolute lg:before:inset-y-0 lg:before:left-0 lg:before:block lg:before:h-full lg:before:w-[1px] lg:before:bg-stroke-light;
+
+		&-item {
+			@apply relative cursor-pointer py-3 lg:pl-8 xl:pl-11;
+
+			.progress {
+				@apply absolute -left-[2px] top-0 z-1 h-full w-[5px] bg-[#E7E7E7] opacity-0 transition-opacity;
+
+				&-thumb {
+					@apply absolute inset-x-0 top-0 z-2 h-full origin-top scale-y-0 bg-green transition-transform;
+				}
+
+				@keyframes featureProgress {
+					0% {
+						transform: scaleY(0);
+					}
+					100% {
+						transform: scaleY(1);
+					}
+				}
+			}
+
+			.heading {
+				@apply opacity-20 transition-opacity hover:opacity-40;
+
+				&-title {
+					@apply text-base md:text-xl xl:text-2xl;
+				}
+
+				&-descr {
+					@apply mt-2 lg:hidden;
+				}
+			}
+		}
+
+		.swiper-pagination-bullet-active {
+			.features-nav-item {
+				@apply cursor-default;
+
+				.progress {
+					@apply opacity-100;
+
+					&-thumb {
+						animation: featureProgress var(--animation-duration) linear both;
+					}
+				}
+
+				.heading {
+					@apply opacity-100;
+
+					&-descr {
+						@apply block;
+					}
+				}
+			}
+		}
+	}
+
+	&-tabs {
+		@apply mb-10 lg:hidden;
+
+		.swiper-slide {
+			@apply h-auto;
+
+			&-active {
+				.features-tabs-item {
+					@apply opacity-100;
+				}
+			}
+		}
+
+		&-item {
+			@apply h-full rounded-2xl border border-stroke-light bg-[#F8F8F8] p-4 opacity-40 transition-opacity hover:opacity-60;
+
+			.title {
+				@apply text-base font-bold;
+			}
+
+			.description {
+				@apply mt-2 text-[0.8125rem];
+			}
+		}
+	}
+
+	&-content {
+		@apply max-w-full lg:col-span-7 lg:col-start-6;
+
+		.prose {
+			@apply max-w-full;
+		}
+
+		.code {
+			@apply overflow-hidden rounded-2xl border border-stroke-light;
+
+			&-header {
+				@apply flex h-10 items-center justify-between gap-x-4 border-b border-stroke-light bg-[#F8F8F8] px-4 dark:bg-[#18191D] md:h-12 md:px-6;
+
+				&-title {
+					@apply truncate text-base font-normal text-lightgray dark:text-white;
+				}
+
+				&-dots {
+					@apply shrink-0;
+				}
+			}
+
+			&-body {
+				@apply p-4 md:p-6;
+
+				pre {
+					@apply m-0 bg-white p-0 dark:bg-[#18191D];
+
+					code {
+						@apply block max-h-96;
+					}
 				}
 			}
 		}

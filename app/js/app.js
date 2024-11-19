@@ -1,3 +1,7 @@
+/* Import Swiper */
+import Swiper from "swiper"
+import { Autoplay, Pagination, Controller, Scrollbar } from "swiper/modules"
+
 /* Import main CSS */
 import("../css/app.css")
 
@@ -9,7 +13,59 @@ import.meta.glob(["../images/**"])
 window.Alpine = Alpine
 
 /* Document ready */
-document.addEventListener("DOMContentLoaded", () => {})
+document.addEventListener("DOMContentLoaded", () => {
+	const featuresContentSwiper = new Swiper(".features-content", {
+		modules: [Autoplay, Pagination],
+		slidesPerView: 1,
+		spaceBetween: 32,
+		// autoHeight: true,
+		// autoplay: {
+		// 	delay: 5000,
+		// },
+		allowTouchMove: false,
+		pagination: {
+			el: ".features-nav",
+			type: "bullets",
+			clickable: true,
+			renderBullet: function (index, className) {
+				const autoplayDelay = this?.passedParams?.autoplay?.delay || 0
+				const featureTitle = this.slides[index].dataset.featureTitle || ""
+				const featureDescr = this.slides[index].dataset.featureDescription || ""
+
+				return `<div class="${className}" style="--animation-duration: ${autoplayDelay}ms">
+					<div class="features-nav-item">
+						<div class="progress">
+							<div class="progress-thumb"></div>
+						</div>
+						<div class="heading">
+							<h5 class="heading-title">${featureTitle}</h5>
+							<p class="heading-descr">${featureDescr}</p>
+						</div>
+					</div>
+				</div>`
+			},
+		},
+	})
+
+	const featuresTabsSwiper = new Swiper(".features-tabs", {
+		modules: [Controller, Scrollbar],
+		slidesPerView: 1.3,
+		spaceBetween: 16,
+		slideToClickedSlide: true,
+		scrollbar: {
+			el: ".features-tabs-scrollbar",
+		},
+		grabCursor: true,
+		controller: {
+			control: featuresContentSwiper,
+		},
+		breakpoints: {
+			720: {
+				slidesPerView: 1.5,
+			},
+		},
+	})
+})
 
 /* Alpine.js */
 document.addEventListener("alpine:init", () => {})

@@ -57,7 +57,7 @@
 	<!-- Section: Advantages -->
 	<section class="advantages section-space">
 		<div class="container">
-			<div class="advantages-heading">
+			<div class="advantages-heading section-heading">
 				<h2 class="title">Yes, it is!</h2>
 			</div>
 			<div class="advantages-wrapper">
@@ -173,6 +173,109 @@
 								<li>Свобода в выборе инструментов и подходов к разработке</li>
 							</ul>
 							<p>Выберите Yii3 для вашего следующего проекта и ощутите силу современной PHP разработки!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section: Features -->
+	<section class="features section-space">
+		<div class="container">
+			<div class="features-heading section-heading">
+				<h2 class="section-title"><span class="text-green">Все что нужно,</span> уже под рукой</h2>
+			</div>
+			<div class="features-wrapper">
+				<!-- Features Navigation -->
+				<div class="features-nav"></div>
+
+				<!-- Features Tabs -->
+				<div class="features-tabs">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Мощный генератор кода Gii</h5>
+								<p class="description">Автоматизирует создание моделей, контроллеров и представлений, значительно
+									ускоряя процесс разработки.</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Готовый шаблон REST API</h5>
+								<p class="description">Автоматизирует создание моделей, контроллеров и представлений, значительно
+									ускоряя процесс разработки.</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Продвинутая система аутентификации и авторизации</h5>
+								<p class="description">Готовые решения для управления ролями и правами доступа.</p>
+							</div>
+						</div>
+					</div>
+					<div class="features-tabs-scrollbar swiper-scrollbar"></div>
+				</div>
+
+				<!-- Features Content -->
+				<div class="features-content swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" data-feature-title="Мощный генератор кода Gii"
+							data-feature-description="Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс разработки.">
+							<div class="features-content-inner prose">
+								<h3>Генерация кода при помощи Gii</h3>
+								<p>Для достижения этой цели всё, что вам нужно, это просто ввести необходимую информацию в соответствии
+									с инструкциями, отображаемыми на веб-страницах Gii.</p>
+								<div class="code">
+									<div class="code-header">
+										<div class="code-header-title">config/web.php</div>
+										<div class="code-header-dots">
+											<svg xmlns="http://www.w3.org/2000/svg" width="46" height="10" fill="none" viewBox="0 0 46 10">
+												<circle cx="5" cy="5" r="5" fill="#FC615D" />
+												<circle cx="23" cy="5" r="5" fill="#FEC041" />
+												<circle cx="41" cy="5" r="5" fill="#34C84A" />
+											</svg>
+										</div>
+									</div>
+									<div class="code-body">
+										<pre><code><div class="line"><span style="color: #F18A2A;">namespace</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">App\Yii3\Resources</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Models\Post</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostIndexPage</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostFormPage</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostDetailPage</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">PostResource</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">extends</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">ModelResource</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $model </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Post</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $title </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #9ECBFF;">'Posts'</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">//...</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">function</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">pages</span><span style="color: #45B26B;">()</span><span style="color: #F18A2A;">:</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">array</span></div><div class="line"><span style="color: #45B26B;">    {</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #F18A2A;">return</span><span style="color: #45B26B;"> [</span></div><div class="line"><span style="color: #45B26B;">            </span><span style="color: #40B3D8;">PostIndexPage</span><span style="color: #F18A2A;">::class</span></div><div class="line"><span style="color: #45B26B;">            </span><span style="color: #40B3D8;">PostFormPage</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">,</span></div><div class="line"><span style="color: #45B26B;">            </span><span style="color: #40B3D8;">PostDetailPage</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">,</span></div><div class="line"><span style="color: #45B26B;">        ];</span></div><div class="line"><span style="color: #45B26B;">    }</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">//...</span></div><div class="line"><span style="color: #45B26B;">}</span></div></code></pre>
+									</div>
+								</div>
+								<p>После этого используйте генератор кода для создания моделей, CRUD и многого другого.</p>
+								<p>Затем настройте сгенерированный код в соответствии с вашими потребностями.</p>
+							</div>
+						</div>
+						<div class="swiper-slide" data-feature-title="Готовый шаблон REST API"
+							data-feature-description="Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс разработки.">
+							<div class="features-content-inner prose">
+								<h3>Готовый шаблон REST API</h3>
+								<p>Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс
+									разработки.</p>
+								<div class="code">
+									<div class="code-header">
+										<div class="code-header-title">config/web.php</div>
+										<div class="code-header-dots">
+											<svg xmlns="http://www.w3.org/2000/svg" width="46" height="10" fill="none" viewBox="0 0 46 10">
+												<circle cx="5" cy="5" r="5" fill="#FC615D" />
+												<circle cx="23" cy="5" r="5" fill="#FEC041" />
+												<circle cx="41" cy="5" r="5" fill="#34C84A" />
+											</svg>
+										</div>
+									</div>
+									<div class="code-body">
+										<pre><code><div class="line"><span style="color: #F18A2A;">namespace</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">App\Yii3\Resources</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostDetailPage</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">PostResource</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">extends</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">ModelResource</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $model </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Post</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $title </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #9ECBFF;">'Posts'</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">//...</span></div></code></pre>
+									</div>
+								</div>
+								<p>После этого используйте генератор кода для создания моделей, CRUD и многого другого.</p>
+								<p>Затем настройте сгенерированный код в соответствии с вашими потребностями.</p>
+							</div>
+						</div>
+						<div class="swiper-slide" data-feature-title="Продвинутая система аутентификации и авторизации"
+							data-feature-description="Готовые решения для управления ролями и правами доступа.">
+							<div class="features-content-inner prose">
+								<h3>Продвинутая система аутентификации и авторизации</h3>
+								<p>Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс.</p>
+							</div>
 						</div>
 					</div>
 				</div>

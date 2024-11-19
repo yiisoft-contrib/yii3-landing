@@ -11,6 +11,9 @@
 /* Tailwind Utilities */
 @import "tailwindcss/utilities";
 
+/* Vendors */
+@import "vendors/swiper.css";
+
 /* Layout */
 @import "layout/header.css";
 @import "layout/footer.css";

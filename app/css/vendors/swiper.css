@@ -1,0 +1,10 @@
+@import "../../../node_modules/swiper/swiper.css";
+
+/* Scrollbar */
+.swiper-scrollbar {
+	@apply relative mt-4 h-1 w-full rounded-none bg-stroke-light dark:bg-[#353535];
+
+	.swiper-scrollbar-drag {
+		@apply absolute inset-y-0 left-0 h-full rounded-none bg-green;
+	}
+}
