@@ -5,6 +5,8 @@
 
 ::selection {
 	@apply bg-black text-white;
+	-webkit-text-fill-color: theme("colors.white");
+	text-fill-color: theme("colors.white");
 }
 
 *,
@@ -52,4 +54,13 @@ pre {
 
 section {
 	@apply relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply text-black dark:text-white;
 }

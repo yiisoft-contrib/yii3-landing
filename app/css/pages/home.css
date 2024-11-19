@@ -22,7 +22,7 @@
 	@apply overflow-x-hidden;
 
 	&-heading {
-		@apply mb-10 text-center text-lg;
+		@apply mb-6 text-center text-base lg:mb-10 lg:text-lg;
 
 		> strong {
 			@apply font-normal text-black dark:text-white;
@@ -44,6 +44,84 @@
 
 		> img {
 			@apply h-full w-full select-none object-scale-down opacity-50 invert dark:opacity-100 dark:invert-0;
+		}
+	}
+}
+
+/* Section: Advantages */
+.advantages {
+	@apply overflow-x-hidden;
+
+	&-heading {
+		@apply mb-10 text-center lg:mb-12;
+
+		.title {
+			@apply inline-block text-4xl font-bold sm:text-5xl xl:text-6xl;
+
+			/* Gradient */
+			background: linear-gradient(90deg, #83c933 0%, #59cb58 14.29%, #1ecb79 28.57%, #00c997 42.86%, #00c5b1 57.14%, #00c0c5 71.43%, #00bad2 85.71%, #40b3d8 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+
+	&-wrapper {
+		@apply -mx-4 overflow-x-auto px-4 md:mx-0 md:px-0;
+	}
+
+	&-grid {
+		@apply grid grid-flow-col gap-x-8 gap-y-12 md:grid-flow-row md:grid-cols-2 xl:grid-cols-3 xl:gap-x-12 xl:gap-y-16;
+	}
+
+	&-item {
+		@apply w-80 last:pr-4 md:w-auto md:last:pr-0;
+
+		.icon {
+			@apply flex size-12 items-center justify-center rounded-lg border;
+
+			> svg {
+				@apply size-[1.75rem];
+			}
+		}
+
+		.title {
+			@apply mt-6 text-xl font-bold lg:text-2xl;
+		}
+
+		.description {
+			@apply mt-3;
+		}
+
+		&--orange {
+			.icon {
+				@apply border-orange/25;
+
+				> svg {
+					@apply fill-orange;
+				}
+			}
+		}
+
+		&--green {
+			.icon {
+				@apply border-green/25;
+
+				> svg {
+					@apply fill-green;
+				}
+			}
+		}
+
+		&--blue {
+			.icon {
+				@apply border-blue/25;
+
+				> svg {
+					@apply fill-blue;
+				}
+			}
 		}
 	}
 }

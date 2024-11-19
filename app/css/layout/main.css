@@ -1,0 +1,8 @@
+/* Main layout customize */
+.section-space {
+	@apply pt-16 sm:pt-24 xl:pt-36;
+}
+
+.section-title {
+	@apply text-3xl font-bold sm:text-4xl xl:text-5xl;
+}

@@ -14,6 +14,7 @@
 /* Layout */
 @import "layout/header.css";
 @import "layout/footer.css";
+@import "layout/main.css";
 
 /* Pages */
 @import "pages/home.css";
