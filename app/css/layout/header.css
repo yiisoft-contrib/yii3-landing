@@ -21,7 +21,7 @@
 
 		@media (max-width: 1139.98px) {
 			&._is-shown {
-				@apply absolute inset-x-0 top-[calc(100%-0.5rem)] z-3 flex flex-col gap-y-4 rounded-2xl p-4 md:left-auto md:right-0 md:flex-row md:py-3;
+				@apply absolute inset-x-0 top-[calc(100%-0.5rem)] z-3 flex flex-col gap-y-4 rounded-2xl p-4 shadow-sm md:left-auto md:right-0 md:flex-row md:py-3;
 			}
 		}
 
@@ -55,7 +55,7 @@
 			}
 
 			> span {
-				@apply text-lightgray text-sm sm:text-[0.9375rem];
+				@apply text-sm text-lightgray sm:text-[0.9375rem];
 			}
 		}
 
@@ -70,16 +70,16 @@
 				}
 
 				&-arrow {
-					@apply fill-lightgray size-3 transition-transform;
+					@apply size-3 fill-lightgray transition-transform;
 				}
 			}
 
 			&-dropdown {
-				@apply absolute -right-2.5 top-full z-5 min-w-[8.75rem] translate-y-4 space-y-3 rounded-xl border border-stroke-light bg-white px-4 py-3;
+				@apply absolute -right-2.5 top-full z-5 min-w-[8.75rem] translate-y-4 space-y-3 rounded-xl border border-stroke-light bg-white px-4 py-3 shadow-sm;
 
 				> li {
 					> a {
-						@apply current:text-lightgray block text-black hover:text-blue current:pointer-events-none;
+						@apply block text-black hover:text-blue current:pointer-events-none current:text-lightgray;
 					}
 				}
 			}

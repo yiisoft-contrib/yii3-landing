@@ -1,0 +1,49 @@
+/* Section: Heroes */
+.heroes {
+	&-content {
+		@apply py-[20vh];
+
+		.title {
+			@apply text-center text-3xl font-bold text-black dark:text-white xs:text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl;
+		}
+
+		.description {
+			@apply mt-3 text-center;
+		}
+
+		.buttons {
+			@apply mx-auto mt-8 flex w-max flex-col flex-wrap gap-3 sm:w-auto sm:flex-row sm:justify-center;
+		}
+	}
+}
+
+/* Section: Companies */
+.companies {
+	@apply overflow-x-hidden;
+
+	&-heading {
+		@apply mb-10 text-center text-lg;
+
+		> strong {
+			@apply font-normal text-black dark:text-white;
+		}
+	}
+
+	&-logos {
+		@apply relative flex items-center justify-center gap-x-8 whitespace-nowrap sm:gap-x-16 lg:gap-x-24 2xl:gap-x-32;
+
+		&::after {
+			@apply pointer-events-none absolute inset-0 h-full;
+			content: "";
+			background: linear-gradient(90deg, #ffffff 3%, rgba(255, 255, 255, 0) 50%, #ffffff 97%);
+		}
+	}
+
+	&-logo {
+		@apply h-12 max-w-32 shrink-0 sm:max-w-36 xl:max-w-40;
+
+		> img {
+			@apply h-full w-full select-none object-scale-down opacity-50 invert dark:opacity-100 dark:invert-0;
+		}
+	}
+}

@@ -19,7 +19,7 @@ body {
 }
 
 body {
-	@apply text-lightgray relative overflow-x-hidden bg-white;
+	@apply relative overflow-x-hidden bg-white text-lightgray;
 	min-width: 320px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -30,7 +30,7 @@ a {
 }
 
 p + p {
-	@apply mt-4;
+	@apply mt-2;
 }
 
 b,
