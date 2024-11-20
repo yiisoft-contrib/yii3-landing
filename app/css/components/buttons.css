@@ -1,6 +1,6 @@
 /* Buttons */
 .btn {
-	@apply relative inline-flex items-center justify-center gap-x-2.5 rounded-5xl px-5 py-3 text-center text-base font-normal transition-all lg:px-6 lg:py-4;
+	@apply relative inline-flex items-center justify-center gap-x-2.5 rounded-5xl px-6 py-4 text-center text-base font-normal transition-all;
 }
 
 /* Themes */

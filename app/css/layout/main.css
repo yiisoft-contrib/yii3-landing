@@ -1,4 +1,10 @@
 /* Main layout customize */
+.container {
+	@media (max-width: 539.98px) {
+		@apply max-w-full;
+	}
+}
+
 .section-space {
 	@apply pt-16 sm:pt-24 xl:pt-36;
 }
@@ -12,7 +18,7 @@
 }
 
 .section-descr {
-	@apply mt-3;
+	@apply mt-4;
 
 	p {
 		b,

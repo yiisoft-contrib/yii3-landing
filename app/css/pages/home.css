@@ -67,16 +67,12 @@
 		}
 	}
 
-	&-wrapper {
-		@apply -mx-4 overflow-x-auto px-4 md:mx-0 md:px-0;
-	}
-
 	&-grid {
-		@apply grid grid-flow-col gap-x-8 gap-y-12 md:grid-flow-row md:grid-cols-2 xl:grid-cols-3 xl:gap-x-12 xl:gap-y-16;
+		@apply -mx-[50vw] grid grid-flow-col gap-x-8 gap-y-12 overflow-x-auto px-[50vw] md:mx-0 md:grid-flow-row md:grid-cols-2 md:px-0 xl:grid-cols-3 xl:gap-x-12 xl:gap-y-16;
 	}
 
 	&-item {
-		@apply w-80 last:pr-4 md:w-auto md:last:pr-0;
+		@apply w-72 last:pr-4 md:w-auto md:last:pr-0;
 
 		.icon {
 			@apply flex size-12 items-center justify-center rounded-lg border;
@@ -91,7 +87,7 @@
 		}
 
 		.description {
-			@apply mt-3;
+			@apply mt-3 max-h-52 overflow-y-auto md:max-h-full;
 
 			ul {
 				@apply list-disc pl-6;
@@ -325,6 +321,75 @@
 				background-clip: text;
 				text-fill-color: transparent;
 			}
+		}
+	}
+}
+
+/* Section: Testimonials */
+.testimonials {
+	@apply overflow-x-hidden;
+
+	&-heading {
+		@apply md:text-center;
+	}
+
+	&-grid {
+		@apply -mx-[50vw] flex gap-6 overflow-x-auto px-[50vw] lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:px-0;
+
+		&-col {
+			@apply flex items-start gap-6 lg:flex-col lg:items-stretch lg:gap-8;
+		}
+	}
+
+	&-item {
+		@apply w-72 rounded-2xl border border-stroke-light bg-[#F8F8F8] p-6 dark:border-stroke-dark dark:bg-[#18191D] lg:w-full;
+
+		.speech {
+			@apply max-h-60 overflow-y-auto lg:max-h-full;
+		}
+
+		.author {
+			@apply mt-6 flex items-center gap-x-4;
+
+			&-photo {
+				@apply size-12 shrink-0 rounded-full;
+			}
+
+			&-main {
+				@apply grow;
+
+				.name {
+					@apply text-base font-bold text-black dark:text-white;
+				}
+
+				.social {
+					@apply dark:text-gray text-sm text-lightgray;
+				}
+			}
+		}
+	}
+
+	&-community {
+		@apply py-10 lg:py-16;
+
+		&-heading {
+			@apply text-center text-2xl font-bold text-black dark:text-white lg:text-3xl;
+
+			.yii-logo {
+				@apply relative -top-1 inline-flex items-center gap-x-2.5 align-middle;
+			}
+
+			svg {
+				@apply inline h-8 w-6 lg:h-12 lg:w-[2.375rem];
+			}
+		}
+
+		&-descr {
+			@apply mt-3 text-center;
+		}
+
+		&-btn {
+			@apply mt-6 text-center;
 		}
 	}
 }
