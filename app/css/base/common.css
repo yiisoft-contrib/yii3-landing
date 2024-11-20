@@ -20,15 +20,19 @@ body {
 	@apply scroll-smooth;
 }
 
+html.dark {
+	color-scheme: dark;
+}
+
 body {
-	@apply relative overflow-x-hidden bg-white text-lightgray;
+	@apply relative overflow-x-hidden bg-white text-lightgray dark:bg-body;
 	min-width: 320px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
-	@apply inline-block text-black transition-all hover:text-blue;
+	@apply inline-block text-black transition-all hover:text-blue dark:text-white dark:hover:text-blue;
 }
 
 p + p {

@@ -298,7 +298,12 @@
 						</p>
 					</div>
 				</div>
-				<img src="./images//technologies-light.svg" class="technologies-header-picture" alt="Yii3 APIs">
+				<div x-data x-show="$store.darkMode.dark">
+					<img src="./images/technologies-dark.svg" class="technologies-header-picture" alt="Yii3 APIs">
+				</div>
+				<div x-data x-show="!$store.darkMode.dark">
+					<img src="./images/technologies-light.svg" class="technologies-header-picture" alt="Yii3 APIs">
+				</div>
 			</div>
 			<div class="technologies-list">
 				<div class="technologies-item">

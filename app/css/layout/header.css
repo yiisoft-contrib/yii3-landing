@@ -1,11 +1,13 @@
 /* Header */
 .header {
+	@apply z-header fixed inset-x-0 top-0 w-full;
+
 	&-inner {
-		@apply relative flex items-center justify-between gap-x-4 py-4 2xl:py-6;
+		@apply relative flex h-16 items-center justify-between gap-x-4 xl:h-24;
 	}
 
 	&-logo {
-		@apply shrink-0;
+		@apply shrink-0 text-black dark:text-white;
 
 		.logo-full {
 			@apply hidden h-[50px] w-[229px] 2xl:block;
@@ -17,38 +19,38 @@
 	}
 
 	&-nav {
-		@apply hidden items-baseline gap-x-6 rounded-4xl border border-stroke-light bg-white px-5 py-2 xl:flex 2xl:gap-x-8 2xl:px-6 2xl:py-2.5;
+		@apply dark:bg-dark/80 hidden items-baseline gap-x-6 rounded-4xl border border-stroke-light bg-white px-5 py-2 backdrop-blur-lg dark:border-stroke-dark xl:flex 2xl:gap-x-8 2xl:px-6 2xl:py-2.5;
 
 		@media (max-width: 1139.98px) {
 			&._is-shown {
-				@apply absolute inset-x-0 top-[calc(100%-0.5rem)] z-3 flex flex-col gap-y-4 rounded-2xl p-4 shadow-sm md:left-auto md:right-0 md:flex-row md:py-3;
+				@apply absolute inset-x-0 top-[calc(100%-0.5rem)] flex flex-col gap-y-4 rounded-2xl p-4 shadow-sm md:left-auto md:right-0 md:flex-row md:py-3;
 			}
 		}
 
 		> li {
 			> a {
-				@apply whitespace-nowrap text-base text-black hover:text-blue;
+				@apply whitespace-nowrap text-base text-black hover:text-blue dark:text-white dark:hover:text-blue;
 			}
 		}
 	}
 
 	&-actions {
-		@apply flex items-center gap-x-3 rounded-4xl border border-stroke-light bg-white px-4 py-2 xl:gap-x-0 xl:rounded-none xl:border-none xl:bg-transparent xl:p-0;
+		@apply dark:bg-dark/80 flex items-center gap-x-3 rounded-4xl border border-stroke-light bg-white px-4 py-2 backdrop-blur-lg dark:border-stroke-dark xl:gap-x-0 xl:rounded-l-4xl xl:border-none xl:p-0 xl:pl-4;
 
 		&-item {
 			@apply inline-flex items-center;
 
 			&:not(:last-child) {
-				@apply xl:after:mx-2.5 xl:after:inline-block xl:after:h-6 xl:after:border-r xl:after:border-[#F6F6F6];
+				@apply xl:after:mx-2.5 xl:after:inline-block xl:after:h-6 xl:after:border-r xl:after:border-[#F6F6F6] xl:dark:after:border-stroke-dark;
 			}
 
 			&:last-child {
-				@apply before:mr-4 before:inline-block before:h-6 before:border-l before:border-[#F6F6F6] xl:before:hidden;
+				@apply before:mr-4 before:inline-block before:h-6 before:border-l before:border-[#F6F6F6] dark:before:border-stroke-dark xl:before:hidden;
 			}
 		}
 
 		.github {
-			@apply inline-flex items-center gap-x-2 text-black hover:text-blue;
+			@apply inline-flex items-center gap-x-2;
 
 			> svg {
 				@apply size-4 fill-current sm:size-5;
@@ -63,7 +65,7 @@
 			@apply relative inline-flex;
 
 			&-btn {
-				@apply inline-flex items-center gap-x-0.5 text-black hover:text-blue current:text-blue;
+				@apply inline-flex items-center gap-x-0.5 text-black hover:text-blue current:text-blue dark:text-white dark:hover:text-blue dark:current:text-blue;
 
 				&-icon {
 					@apply size-4 fill-current sm:size-5;
@@ -75,18 +77,18 @@
 			}
 
 			&-dropdown {
-				@apply absolute -right-2.5 top-full z-5 min-w-[8.75rem] translate-y-4 space-y-3 rounded-xl border border-stroke-light bg-white px-4 py-3 shadow-sm;
+				@apply dark:bg-dark absolute -right-2.5 top-full z-5 min-w-[8.75rem] translate-y-4 space-y-3 rounded-xl border border-stroke-light bg-white px-4 py-3 shadow-sm dark:border-stroke-dark;
 
 				> li {
 					> a {
-						@apply block text-black hover:text-blue current:pointer-events-none current:text-lightgray;
+						@apply block text-black hover:text-blue current:pointer-events-none current:text-lightgray dark:text-white dark:hover:text-blue dark:current:text-lightgray;
 					}
 				}
 			}
 		}
 
 		.darkmode {
-			@apply text-black hover:text-blue;
+			@apply text-black hover:text-blue dark:text-white dark:hover:text-blue;
 
 			> svg {
 				@apply size-4 sm:size-5;
@@ -94,7 +96,7 @@
 		}
 
 		.burger {
-			@apply relative size-5 text-black hover:text-blue xl:hidden;
+			@apply relative size-5 text-black hover:text-blue dark:text-white dark:hover:text-blue xl:hidden;
 
 			> svg {
 				@apply absolute inset-0 m-auto;

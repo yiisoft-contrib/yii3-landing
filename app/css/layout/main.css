@@ -5,6 +5,10 @@
 	}
 }
 
+.main {
+	@apply pt-16 xl:pt-24;
+}
+
 .section-space {
 	@apply pt-16 sm:pt-24 xl:pt-36;
 }

@@ -5,7 +5,7 @@
 
 /* Themes */
 .btn-gradient {
-	@apply text-white hover:text-white;
+	@apply text-white hover:text-white dark:text-white dark:hover:text-white;
 	background: linear-gradient(90deg, #83c933 0%, #59cb58 14.29%, #1ecb79 28.57%, #00c997 42.86%, #00c5b1 57.14%, #00c0c5 71.43%, #00bad2 85.71%, #40b3d8 100%);
 	background-size: 100%;
 

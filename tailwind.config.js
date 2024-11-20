@@ -34,6 +34,7 @@ module.exports = {
 					DEFAULT: "#A3A5AD",
 				},
 				lightgray: "#87888C",
+				dark: "#18191D",
 				body: "#141518",
 				stroke: {
 					light: "#EBEBEB",
@@ -56,6 +57,7 @@ module.exports = {
 				3: "3",
 				4: "4",
 				5: "5",
+				header: "999",
 			},
 		},
 	},

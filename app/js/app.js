@@ -7,6 +7,7 @@ import("../css/app.css")
 
 /* Import Alpine.js */
 import Alpine from "alpinejs"
+import persist from "@alpinejs/persist"
 
 import.meta.glob(["../images/**"])
 
@@ -69,6 +70,23 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 /* Alpine.js */
-document.addEventListener("alpine:init", () => {})
+document.addEventListener("alpine:init", () => {
+	Alpine.plugin(persist)
+
+	/* Dark mode */
+	Alpine.store("darkMode", {
+		dark: Alpine.$persist(false).as("darkMode"),
+
+		init() {
+			document.documentElement.classList.toggle("dark", this.dark)
+		},
+
+		toggle() {
+			this.dark = !this.dark
+
+			document.documentElement.classList.toggle("dark", this.dark)
+		},
+	})
+})
 
 Alpine.start()
