@@ -19,7 +19,7 @@
 	}
 
 	&-nav {
-		@apply dark:bg-dark/80 hidden items-baseline gap-x-6 rounded-4xl border border-stroke-light bg-white px-5 py-2 backdrop-blur-lg dark:border-stroke-dark xl:flex 2xl:gap-x-8 2xl:px-6 2xl:py-2.5;
+		@apply dark:bg-dark/80 hidden items-baseline gap-x-6 rounded-4xl border border-stroke-light bg-white/90 px-5 py-2 backdrop-blur-lg dark:border-stroke-dark xl:flex 2xl:gap-x-8 2xl:px-6 2xl:py-2.5;
 
 		@media (max-width: 1139.98px) {
 			&._is-shown {
@@ -35,7 +35,7 @@
 	}
 
 	&-actions {
-		@apply dark:bg-dark/80 flex items-center gap-x-3 rounded-4xl border border-stroke-light bg-white px-4 py-2 backdrop-blur-lg dark:border-stroke-dark xl:gap-x-0 xl:rounded-l-4xl xl:border-none xl:p-0 xl:pl-4;
+		@apply dark:bg-dark/80 flex items-center gap-x-3 rounded-4xl border border-stroke-light bg-white/90 px-4 py-2 backdrop-blur-lg dark:border-stroke-dark xl:gap-x-0 xl:rounded-l-4xl xl:border-none xl:p-0 xl:pl-4;
 
 		&-item {
 			@apply inline-flex items-center;

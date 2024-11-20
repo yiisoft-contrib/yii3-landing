@@ -1,6 +1,6 @@
 /* Import Swiper */
 import Swiper from "swiper"
-import { Autoplay, Pagination, Controller, Scrollbar } from "swiper/modules"
+import { Autoplay, Pagination, Controller, Scrollbar, EffectFade } from "swiper/modules"
 
 /* Import main CSS */
 import("../css/app.css")
@@ -16,15 +16,20 @@ window.Alpine = Alpine
 /* Document ready */
 document.addEventListener("DOMContentLoaded", () => {
 	const featuresContentSwiper = new Swiper(".features-content", {
-		modules: [Autoplay, Pagination, Controller],
+		modules: [EffectFade, Autoplay, Pagination, Controller],
 		slidesPerView: 1,
 		spaceBetween: 32,
 		autoHeight: true,
-		// autoplay: {
-		// 	delay: 5000,
-		// 	pauseOnMouseEnter: true,
-		// },
+		autoplay: {
+			delay: 5000,
+			pauseOnMouseEnter: true,
+			disableOnInteraction: false,
+		},
 		allowTouchMove: false,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true,
+		},
 		pagination: {
 			el: ".features-nav",
 			type: "bullets",
@@ -47,6 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				</div>`
 			},
 		},
+		on: {
+			autoplayPause: function (swiper) {
+				swiper.pagination.bullets[swiper.realIndex].classList.add("_is-paused")
+			},
+			autoplayResume: function (swiper) {
+				swiper.pagination.bullets[swiper.realIndex].classList.remove("_is-paused")
+			},
+		},
 	})
 
 	const featuresTabsSwiper = new Swiper(".features-tabs", {
@@ -67,6 +80,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	featuresContentSwiper.controller.control = featuresTabsSwiper
 	featuresTabsSwiper.controller.control = featuresContentSwiper
+
+	function isMobile() {
+		return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+	}
+
+	if (isMobile()) {
+		featuresContentSwiper.autoplay.stop()
+	} else {
+		featuresContentSwiper.autoplay.start()
+	}
 })
 
 /* Alpine.js */
