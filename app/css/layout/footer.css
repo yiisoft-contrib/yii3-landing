@@ -1,3 +1,90 @@
 /* Site footer */
 .footer {
+	&-statictic {
+		@apply grid grid-cols-1 gap-x-8 border-t border-stroke-light dark:border-stroke-dark lg:grid-cols-2;
+
+		&-item {
+			@apply grid grid-cols-1 items-center gap-x-12 gap-y-6 py-6 sm:py-8 lg:grid-cols-[auto,1fr] lg:py-8 xl:gap-x-16 xl:py-12 2xl:py-16;
+
+			.number {
+				&-value {
+					@apply inline-block text-5xl lg:text-6xl;
+				}
+			}
+
+			.heading {
+				@apply max-w-[27.5rem];
+
+				&-title {
+					@apply text-xl font-bold lg:text-2xl;
+				}
+
+				&-descr {
+					@apply mt-3;
+				}
+			}
+
+			&:not(:last-child) {
+				@apply border-b border-stroke-light dark:border-stroke-dark lg:border-b-0;
+			}
+
+			&:nth-child(1) {
+				.number-value {
+					background: linear-gradient(90deg, #83c933 0%, #00c7a5 25%, #40b3d8 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					text-fill-color: transparent;
+				}
+			}
+
+			&:nth-child(2) {
+				.number-value {
+					background: linear-gradient(90deg, #83c933 0%, #00c7a5 50%, #40b3d8 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					text-fill-color: transparent;
+				}
+			}
+		}
+	}
+
+	&-main {
+		@apply grid grid-cols-2 gap-x-4 gap-y-8 border-t border-stroke-light py-10 dark:border-stroke-dark sm:grid-cols-3 md:gap-y-12 md:py-12 lg:gap-x-8 xl:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] xl:py-16;
+
+		&-col {
+			@apply space-y-4;
+		}
+
+		&-title {
+			@apply text-base font-bold text-black dark:text-white md:text-lg;
+		}
+	}
+
+	&-nav {
+		@apply space-y-2;
+
+		> li {
+			> a {
+				@apply text-sm text-lightgray hover:text-blue dark:text-gray dark:hover:text-blue xs:text-base;
+			}
+		}
+	}
+
+	&-social {
+		@apply mb-5 flex flex-wrap gap-4 lg:mb-6;
+
+		svg {
+			@apply size-5;
+		}
+	}
+
+	&-madeby {
+		@apply pb-8 text-center;
+
+		&-link {
+			@apply text-black hover:text-[#FF3646] dark:text-white dark:hover:text-[#FF3646];
+		}
+	}
 }
