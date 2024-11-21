@@ -15,6 +15,36 @@ window.Alpine = Alpine
 
 /* Document ready */
 document.addEventListener("DOMContentLoaded", () => {
+	/* Logos Marquee */
+	let gsapMedia = gsap.matchMedia()
+	const marquee = document.querySelector(".companies-logos")
+
+	const marqueeContent = marquee.firstElementChild
+	const marqueeContentClone = marqueeContent.cloneNode(true)
+	marquee.append(marqueeContentClone)
+
+	let tween
+
+	gsapMedia.add(
+		{
+			isMobile: "(max-width: 719px)",
+			isDesktop: "(min-width: 720px)",
+		},
+		(context) => {
+			let { isMobile, isDesktop } = context.conditions
+
+			let progress = tween ? tween.progress() : 0
+			tween && tween.progress(0).kill()
+			const width = parseInt(getComputedStyle(marqueeContent).getPropertyValue("width"), 10)
+			const gap = parseInt(getComputedStyle(marqueeContent).getPropertyValue("columnGap"), 10) || 32
+			const distanceToTranslate = -1 * (gap + width)
+
+			tween = gsap.fromTo(marquee.children, { x: 0 }, { x: distanceToTranslate, duration: isMobile ? 5 : 15, ease: "none", repeat: -1 })
+			tween.progress(progress)
+		},
+	)
+
+	/* Features slider */
 	const featuresContentSwiper = new Swiper(".features-content", {
 		modules: [EffectFade, Autoplay, Pagination, Controller],
 		slidesPerView: 1,
