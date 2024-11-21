@@ -13,8 +13,40 @@ import.meta.glob(["../images/**"])
 
 window.Alpine = Alpine
 
+/* Register GSAP Plugins */
+gsap.registerPlugin(Text)
+
 /* Document ready */
 document.addEventListener("DOMContentLoaded", () => {
+	/* Typing effect */
+	const heroesTitleWords = [
+		["Безопасный.", "text-green"],
+		["Современный.", "text-blue"],
+		["Производительный.", "text-orange"],
+	]
+	const heroesTitleTimeline = gsap.timeline({ repeat: -1 })
+
+	gsap.to(".heroes-content .title > .cursor", {
+		opacity: 0,
+		repeat: -1,
+		yoyo: true,
+		duration: 0.5,
+		ease: "power2.inOut",
+	})
+
+	heroesTitleWords.forEach(([word, className]) => {
+		let tlText = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2 })
+		tlText.to(".heroes-content .title > span", {
+			duration: 1,
+			text: {
+				value: word,
+				newClass: className,
+			},
+			ease: "none",
+		})
+		heroesTitleTimeline.add(tlText)
+	})
+
 	/* Logos Marquee */
 	let gsapMedia = gsap.matchMedia()
 	const marquee = document.querySelector(".companies-logos")

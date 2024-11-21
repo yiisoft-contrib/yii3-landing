@@ -4,7 +4,11 @@
 		@apply py-16 lg:py-[20vh];
 
 		.title {
-			@apply text-center text-3xl font-bold text-black dark:text-white xs:text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl;
+			@apply text-center text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl;
+
+			.cursor {
+				@apply font-normal not-italic text-stroke-light dark:text-stroke-dark;
+			}
 		}
 
 		.description {
@@ -222,7 +226,7 @@
 		}
 
 		&-item {
-			@apply dark:bg-dark h-full rounded-2xl border border-stroke-light bg-[#F8F8F8] p-4 opacity-40 transition-opacity hover:opacity-60 dark:border-stroke-dark;
+			@apply h-full rounded-2xl border border-stroke-light bg-[#F8F8F8] p-4 opacity-40 transition-opacity hover:opacity-60 dark:border-stroke-dark dark:bg-dark;
 
 			.title {
 				@apply text-base font-bold;
@@ -245,7 +249,7 @@
 			@apply overflow-hidden rounded-2xl border border-stroke-light dark:border-stroke-dark;
 
 			&-header {
-				@apply dark:bg-dark flex h-10 items-center justify-between gap-x-4 border-b border-stroke-light bg-[#F8F8F8] px-4 dark:border-stroke-dark md:h-12 md:px-6;
+				@apply flex h-10 items-center justify-between gap-x-4 border-b border-stroke-light bg-[#F8F8F8] px-4 dark:border-stroke-dark dark:bg-dark md:h-12 md:px-6;
 
 				&-title {
 					@apply truncate text-base font-normal text-lightgray dark:text-white;
@@ -257,7 +261,7 @@
 			}
 
 			&-body {
-				@apply dark:bg-dark bg-white p-4 md:p-6;
+				@apply bg-white p-4 dark:bg-dark md:p-6;
 
 				pre {
 					@apply m-0 bg-transparent p-0;
@@ -361,7 +365,7 @@
 	}
 
 	&-item {
-		@apply dark:bg-dark w-72 rounded-2xl border border-stroke-light bg-[#F8F8F8] p-6 dark:border-stroke-dark lg:w-full;
+		@apply w-72 rounded-2xl border border-stroke-light bg-[#F8F8F8] p-6 dark:border-stroke-dark dark:bg-dark lg:w-full;
 
 		.speech {
 			@apply max-h-60 overflow-y-auto lg:max-h-full;
