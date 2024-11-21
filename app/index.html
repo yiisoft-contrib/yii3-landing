@@ -6,7 +6,12 @@
 	<section class="heroes">
 		<div class="container">
 			<div class="heroes-content">
-				<h1 class="title">Yii3. <span></span><em class="cursor">_</em></h1>
+				<h1 class="title">
+					Yii3.
+					<span
+						data-words='["Безопасный.", "text-green"], ["Современный.", "text-blue"], ["Производительный.", "text-orange"]'></span><em
+						class="cursor">_</em>
+				</h1>
 				<div class="description">
 					<p>PHP фреймворк для быстрого создания современных приложений.</p>
 				</div>
@@ -328,7 +333,31 @@
 										</div>
 									</div>
 									<div class="code-body">
-										<pre><code><div class="line"><span style="color: #F18A2A;">namespace</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">App\Yii3\Resources</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Models\Post</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostIndexPage</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostFormPage</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostDetailPage</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">PostResource</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">extends</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">ModelResource</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $model </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Post</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $title </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #9ECBFF;">'Posts'</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">//...</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">function</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">pages</span><span style="color: #45B26B;">()</span><span style="color: #F18A2A;">:</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">array</span></div><div class="line"><span style="color: #45B26B;">    {</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #F18A2A;">return</span><span style="color: #45B26B;"> [</span></div><div class="line"><span style="color: #45B26B;">            </span><span style="color: #40B3D8;">PostIndexPage</span><span style="color: #F18A2A;">::class</span></div><div class="line"><span style="color: #45B26B;">            </span><span style="color: #40B3D8;">PostFormPage</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">,</span></div><div class="line"><span style="color: #45B26B;">            </span><span style="color: #40B3D8;">PostDetailPage</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">,</span></div><div class="line"><span style="color: #45B26B;">        ];</span></div><div class="line"><span style="color: #45B26B;">    }</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">//...</span></div><div class="line"><span style="color: #45B26B;">}</span></div></code></pre>
+										<pre><code><div class="line"><span style="color: #F18A2A;">namespace</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">App\Yii3\Resources</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Models\Post</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostIndexPage</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostFormPage</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostDetailPage</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">PostResource</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">extends</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">ModelResource</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $model </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Post</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $title </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #9ECBFF;">'
+						Posts'</span><span style="color: #45B26B;">;</span>
+			</div>
+			<div class="line">&nbsp;</div>
+			<div class="line"><span style="color: #45B26B;"> </span><span style="color: #ccc;">//...</span></div>
+			<div class="line">&nbsp;</div>
+			<div class="line"><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">protected</span><span
+					style="color: #45B26B;"> </span><span style="color: #F18A2A;">function</span><span style="color: #45B26B;">
+				</span><span style="color: #B392F0;">pages</span><span style="color: #45B26B;">()</span><span
+					style="color: #F18A2A;">:</span><span style="color: #45B26B;"> </span><span
+					style="color: #F18A2A;">array</span></div>
+			<div class="line"><span style="color: #45B26B;"> {</span></div>
+			<div class="line"><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">return</span><span
+					style="color: #45B26B;"> [</span></div>
+			<div class="line"><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">PostIndexPage</span><span
+					style="color: #F18A2A;">::class</span></div>
+			<div class="line"><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">PostFormPage</span><span
+					style="color: #F18A2A;">::class</span><span style="color: #45B26B;">,</span></div>
+			<div class="line"><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">PostDetailPage</span><span
+					style="color: #F18A2A;">::class</span><span style="color: #45B26B;">,</span></div>
+			<div class="line"><span style="color: #45B26B;"> ];</span></div>
+			<div class="line"><span style="color: #45B26B;"> }</span></div>
+			<div class="line">&nbsp;</div>
+			<div class="line"><span style="color: #45B26B;"> </span><span style="color: #ccc;">//...</span></div>
+			<div class="line"><span style="color: #45B26B;">}</span></div></code></pre>
 									</div>
 								</div>
 								<p>После этого используйте генератор кода для создания моделей, CRUD и многого другого.</p>

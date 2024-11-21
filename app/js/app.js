@@ -19,33 +19,34 @@ gsap.registerPlugin(Text)
 /* Document ready */
 document.addEventListener("DOMContentLoaded", () => {
 	/* Typing effect */
-	const heroesTitleWords = [
-		["Безопасный.", "text-green"],
-		["Современный.", "text-blue"],
-		["Производительный.", "text-orange"],
-	]
+	const heroesTitleEl = document.querySelector(".heroes-content .title > span")
+	const heroesCursorEl = document.querySelector(".heroes-content .title > .cursor")
+	const heroesTitleWords = heroesTitleEl.getAttribute("data-words")
+	const heroesTitleWordsArr = JSON.parse(`[${heroesTitleWords}]`)
 	const heroesTitleTimeline = gsap.timeline({ repeat: -1 })
 
-	gsap.to(".heroes-content .title > .cursor", {
-		opacity: 0,
-		repeat: -1,
-		yoyo: true,
-		duration: 0.5,
-		ease: "power2.inOut",
-	})
-
-	heroesTitleWords.forEach(([word, className]) => {
-		let tlText = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2 })
-		tlText.to(".heroes-content .title > span", {
-			duration: 1,
-			text: {
-				value: word,
-				newClass: className,
-			},
-			ease: "none",
+	if (heroesTitleWordsArr) {
+		gsap.to(heroesCursorEl, {
+			opacity: 0,
+			repeat: -1,
+			yoyo: true,
+			duration: 0.5,
+			ease: "power2.inOut",
 		})
-		heroesTitleTimeline.add(tlText)
-	})
+
+		heroesTitleWordsArr.forEach(([word, className]) => {
+			let tlText = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2 })
+			tlText.to(".heroes-content .title > span", {
+				duration: 1,
+				text: {
+					value: word,
+					newClass: className,
+				},
+				ease: "none",
+			})
+			heroesTitleTimeline.add(tlText)
+		})
+	}
 
 	/* Logos Marquee */
 	let gsapMedia = gsap.matchMedia()
@@ -161,14 +162,11 @@ document.addEventListener("alpine:init", () => {
 	/* Dark mode */
 	Alpine.store("darkMode", {
 		dark: Alpine.$persist(false).as("darkMode"),
-
 		init() {
 			document.documentElement.classList.toggle("dark", this.dark)
 		},
-
 		toggle() {
 			this.dark = !this.dark
-
 			document.documentElement.classList.toggle("dark", this.dark)
 		},
 	})
