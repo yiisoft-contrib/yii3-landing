@@ -35,7 +35,7 @@
 	}
 
 	&-actions {
-		@apply flex items-center gap-x-3 rounded-4xl border border-stroke-light bg-white/90 px-4 py-2 backdrop-blur-lg dark:border-stroke-dark dark:bg-dark/80 xl:gap-x-0 xl:rounded-l-4xl xl:border-none xl:p-0 xl:pl-4;
+		@apply flex items-center gap-x-3 rounded-4xl border border-stroke-light bg-white/90 px-4 py-2 backdrop-blur-lg dark:border-stroke-dark dark:bg-body/80 xl:gap-x-0 xl:rounded-l-4xl xl:border-none xl:p-0 xl:pl-4;
 
 		&-item {
 			@apply inline-flex items-center;

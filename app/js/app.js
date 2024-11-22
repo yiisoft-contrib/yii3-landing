@@ -18,6 +18,46 @@ gsap.registerPlugin(Text)
 
 /* Document ready */
 document.addEventListener("DOMContentLoaded", () => {
+	/* Leafs parallax effect */
+	const leafs = gsap.utils.toArray(".leaf")
+
+	gsap.fromTo(
+		leafs,
+		{
+			opacity: 0,
+			rotateZ: 90,
+			scale: 0,
+			filter: "blur(4px)",
+		},
+		{
+			delay: 0.5,
+			duration: 2,
+			opacity: 0.75,
+			rotateZ: 0,
+			scale: 1,
+			filter: "blur(8px)",
+			ease: "back",
+		},
+	)
+
+	document.addEventListener("mousemove", (e) => {
+		const x = e.clientX / window.innerWidth - 0.5
+		const y = e.clientY / window.innerHeight - 0.5
+
+		leafs.forEach((leaf) => {
+			const depth = leaf.dataset.depth
+			const movementX = x * depth * 100
+			const movementY = y * depth * 100
+
+			gsap.to(leaf, {
+				x: movementX,
+				y: movementY,
+				duration: 0.5,
+				ease: "power2.out",
+			})
+		})
+	})
+
 	/* Typing effect */
 	const heroesTitleEl = document.querySelector(".heroes-content .title > span")
 	const heroesCursorEl = document.querySelector(".heroes-content .title > .cursor")
@@ -51,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	/* Logos Marquee */
 	let gsapMedia = gsap.matchMedia()
 	const marquee = document.querySelector(".companies-logos")
-
 	const marqueeContent = marquee.firstElementChild
 	const marqueeContentClone = marqueeContent.cloneNode(true)
 	marquee.append(marqueeContentClone)

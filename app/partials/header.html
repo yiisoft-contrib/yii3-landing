@@ -60,10 +60,10 @@
 					</svg>
 				</a>
 				<ul class="header-nav" :class="showNavigation && '_is-shown'">
-					<li><a href="#">Преимущества</a></li>
-					<li><a href="#">Возможности</a></li>
-					<li><a href="#">Пример использования</a></li>
-					<li><a href="#">Комьюнити</a></li>
+					<li><a href="#advantages" @click="showNavigation = false">Преимущества</a></li>
+					<li><a href="#features" @click="showNavigation = false">Возможности</a></li>
+					<li><a href="#companies" @click="showNavigation = false">Пример использования</a></li>
+					<li><a href="#testimonials" @click="showNavigation = false">Комьюнити</a></li>
 				</ul>
 				<div class="header-actions">
 					<div class="header-actions-item">

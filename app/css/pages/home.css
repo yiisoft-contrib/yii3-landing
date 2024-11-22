@@ -1,7 +1,9 @@
 /* Section: Heroes */
 .heroes {
+	@apply overflow-x-clip;
+
 	&-content {
-		@apply py-16 lg:py-[20vh];
+		@apply relative py-16 lg:py-[clamp(8rem,20vh,16rem)];
 
 		.title {
 			@apply text-center text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl;
@@ -12,11 +14,27 @@
 		}
 
 		.description {
-			@apply mt-4 text-center;
+			@apply mx-auto mt-4 max-w-[360px] text-center lg:max-w-full;
 		}
 
 		.buttons {
 			@apply mx-auto mt-8 flex w-max flex-col flex-wrap gap-3 sm:w-auto sm:flex-row sm:justify-center;
+		}
+
+		.leaf {
+			@apply absolute -z-1 size-12 md:size-16 lg:size-20 xl:size-24;
+
+			&-green {
+				@apply -left-[5%] top-[20%] md:left-[8%] xl:left-[13%];
+			}
+
+			&-orange {
+				@apply -right-[5%] top-[10%] md:right-[6%] lg:right-[10%] 2xl:right-[15%];
+			}
+
+			&-blue {
+				@apply -right-[2%] bottom-[25%] xs:right-[4%] sm:bottom-0 sm:right-[15%] lg:bottom-[20%] lg:right-[20%] 2xl:right-[26%];
+			}
 		}
 	}
 }
