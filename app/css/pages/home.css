@@ -228,6 +228,12 @@
 				}
 			}
 		}
+
+		&._is-stopped {
+			.features-nav-item .progress-thumb {
+				@apply transform-none animate-none transition-none;
+			}
+		}
 	}
 
 	&-tabs {

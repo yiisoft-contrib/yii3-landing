@@ -3,7 +3,7 @@ import Swiper from "swiper"
 import { Autoplay, Pagination, Controller, Scrollbar, EffectFade } from "swiper/modules"
 
 /* Import main CSS */
-import("../css/app.css")
+// import("../css/app.css")
 
 /* Import Alpine.js */
 import Alpine from "alpinejs"
@@ -14,7 +14,7 @@ import.meta.glob(["../images/**"])
 window.Alpine = Alpine
 
 /* Register GSAP Plugins */
-gsap.registerPlugin(Text)
+gsap.registerPlugin(Text, ScrollTrigger)
 
 /* Document ready */
 document.addEventListener("DOMContentLoaded", () => {
@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	)
 
-	document.addEventListener("mousemove", (e) => {
-		const x = e.clientX / window.innerWidth - 0.5
-		const y = e.clientY / window.innerHeight - 0.5
+	const animateLeafs = () => {
+		const x = Math.sin(Date.now() * 0.001) * 0.5
+		const y = Math.cos(Date.now() * 0.001) * 0.5
 
 		leafs.forEach((leaf) => {
 			const depth = leaf.dataset.depth
@@ -56,7 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				ease: "power2.out",
 			})
 		})
-	})
+
+		requestAnimationFrame(animateLeafs)
+	}
+
+	animateLeafs()
 
 	/* Typing effect */
 	const heroesTitleEl = document.querySelector(".heroes-content .title > span")
@@ -111,10 +115,36 @@ document.addEventListener("DOMContentLoaded", () => {
 			const gap = parseInt(getComputedStyle(marqueeContent).getPropertyValue("columnGap"), 10) || 32
 			const distanceToTranslate = -1 * (gap + width)
 
-			tween = gsap.fromTo(marquee.children, { x: 0 }, { x: distanceToTranslate, duration: isMobile ? 5 : 15, ease: "none", repeat: -1 })
+			tween = gsap.fromTo(marquee.children, { x: 0 }, { x: distanceToTranslate, duration: isMobile ? 15 : 30, ease: "none", repeat: -1 })
 			tween.progress(progress)
 		},
 	)
+
+	/* Circles animation */
+	gsap.from("#svg-circles path", {
+		yPercent: 15,
+		stagger: 0.05,
+		autoAlpha: 0,
+		duration: 0.75,
+		ease: "power1",
+		scrollTrigger: {
+			trigger: ".advantages",
+			start: "top 75%",
+		},
+	})
+
+	/* Squares animation */
+	gsap.from("#svg-squares path", {
+		yPercent: 15,
+		stagger: 0.05,
+		autoAlpha: 0,
+		duration: 0.75,
+		ease: "power1",
+		scrollTrigger: {
+			trigger: ".features",
+			start: "top center",
+		},
+	})
 
 	/* Features slider */
 	const featuresContentSwiper = new Swiper(".features-content", {
@@ -125,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		autoplay: {
 			delay: 5000,
 			pauseOnMouseEnter: true,
-			disableOnInteraction: false,
+			disableOnInteraction: true,
 		},
 		allowTouchMove: false,
 		effect: "fade",
@@ -160,6 +190,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			},
 			autoplayResume: function (swiper) {
 				swiper.pagination.bullets[swiper.realIndex].classList.remove("_is-paused")
+			},
+			autoplayStop: function (swiper) {
+				swiper.pagination.el.classList.add("_is-stopped")
 			},
 		},
 	})
