@@ -10,9 +10,8 @@ export default {
 	],
 	build: {
 		emptyOutDir: true,
-		manifest: true,
 		rollupOptions: {
-			input: ["app/js/app.js"],
+			input: resolve(__dirname, "app/index.html"),
 			output: {
 				entryFileNames: `js/scripts.js`,
 				assetFileNames: (file) => {
