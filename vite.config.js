@@ -6,14 +6,24 @@ export default {
 	plugins: [
 		handlebars({
 			partialDirectory: resolve(__dirname, "app/partials"),
+			context(pagePath) {
+				return {
+					isRussian: pagePath.endsWith('ru.html'),
+					isEnglish: pagePath.endsWith('index.html'),
+				}
+			},
 		}),
 	],
 	build: {
 		emptyOutDir: true,
 		rollupOptions: {
-			input: resolve(__dirname, "app/index.html"),
+			input: {
+				main: resolve(__dirname, "app/index.html"),
+				ru: resolve(__dirname, "app/ru.html"),
+			},
 			output: {
-				entryFileNames: `js/scripts.js`,
+				entryFileNames: `js/[name].js`,
+				chunkFileNames: `js/[name].js`,
 				assetFileNames: (file) => {
 					let ext = file.name.split(".").pop()
 
