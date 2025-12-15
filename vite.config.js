@@ -6,12 +6,6 @@ export default {
 	plugins: [
 		handlebars({
 			partialDirectory: resolve(__dirname, "app/partials"),
-			context(pagePath) {
-				return {
-					isRussian: pagePath.endsWith('ru.html'),
-					isEnglish: pagePath.endsWith('index.html'),
-				}
-			},
 		}),
 	],
 	build: {
