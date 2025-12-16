@@ -10,11 +10,14 @@ export default {
 	],
 	build: {
 		emptyOutDir: true,
-		manifest: true,
 		rollupOptions: {
-			input: ["app/js/app.js"],
+			input: {
+				main: resolve(__dirname, "app/index.html"),
+				ru: resolve(__dirname, "app/ru.html"),
+			},
 			output: {
-				entryFileNames: `js/scripts.js`,
+				entryFileNames: `js/[name].js`,
+				chunkFileNames: `js/[name].js`,
 				assetFileNames: (file) => {
 					let ext = file.name.split(".").pop()
 

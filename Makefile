@@ -6,3 +6,6 @@ up:
 
 down:
 	docker stop yii3-landing
+
+build:
+	docker run --rm -w /app -u `id -u`:`id -g` -v .:/app node:23.5.0 npm run build
