@@ -7,7 +7,10 @@
 	}
 
 	&-logo {
-		@apply shrink-0 text-black dark:text-white;
+		@apply shrink-0;
+		a& {
+			@apply text-black dark:text-white;
+		}
 
 		.logo-full {
 			@apply hidden h-[50px] w-[229px] 2xl:block;
