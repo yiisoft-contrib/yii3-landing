@@ -374,7 +374,7 @@
 
 /* Section: Testimonials */
 .testimonials {
-	@apply relative overflow-hidden;
+	@apply relative overflow-hidden pt-16 lg:pt-24;
 
 	&-heading {
 		@apply md:text-center;
