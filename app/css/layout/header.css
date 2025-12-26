@@ -7,11 +7,11 @@
 	}
 
 	&-logo {
-		@apply shrink-0;
+		@apply shrink-0 rounded-2xl px-4 py-2 bg-white/90 dark:bg-body/90 transition-transform;
+
 		a& {
 			@apply text-black dark:text-white;
 		}
-
 		.logo-full {
 			@apply hidden h-[50px] w-[229px] 2xl:block;
 		}
