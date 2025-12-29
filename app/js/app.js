@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					const wrapX = gsap.utils.wrap(-loopDistance, 0)
 					const snapX = gsap.utils.snap(1 / dpr)
 					gsap.set(track, { x: 0, force3D: true })
-					const pxPerSecond = isMobile ? 20 : 30
+					const pxPerSecond = isMobile ? 40 : 60
 					const duration = loopDistance / pxPerSecond
 
 					tween = gsap.to(track, {
