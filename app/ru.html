@@ -646,56 +646,56 @@ description="PHP-фреймворк для быстрой разработки �
 									</div>
 								</div>
 								<p>
-									Commands provide clean APIs for data manipulation including upsert, batch operations, and transactions. Active Record delivers ORM capabilities with relations, eager loading, and automatic validation. Migrations enable version-controlled schema evolution.
+									Команды предоставляют чистый API для манипуляции данными, включая upsert, пакетные операции и транзакции. Active Record обеспечивает возможности ORM с отношениями, жадной загрузкой и автоматической валидацией. Миграции позволяют версионировать схему данных.
 								</p>
-								<p>Multiple database engines supported out of the box. Optionally integrate Cycle ORM or Doctrine for advanced use cases.</p>
+								<p>Множество СУБД поддерживаются из коробки. Опционально можно интегрировать Cycle ORM или Doctrine для сложных случаев.</p>
 							</div>
 						</div>
-						<div class="swiper-slide" data-feature-title="Rich Yii Packages Ecosystem"
-							 data-feature-description="Extensive collection of official packages for databases, caching, validation, authentication, and more—ready to use.">
+						<div class="swiper-slide" data-feature-title="Богатая экосистема пакетов"
+							 data-feature-description="Обширная коллекция официальных пакетов для работы с БД, кэшированием, валидацией, аутентификацией и многим другим.">
 							<div class="features-content-inner prose">
 
-								<h3>Rich Yii Packages Ecosystem</h3>
+								<h3>Богатая экосистема пакетов</h3>
 								<p>
-									Yii3 provides a comprehensive ecosystem of production-ready packages covering virtually every web application need. All packages follow the same quality standards with full test coverage and PSR compliance.
+									Yii3 предоставляет комплексную экосистему готовых к использованию пакетов, покрывающих практически любые потребности веб-приложения. Все пакеты следуют единым стандартам качества с полным покрытием тестами и соблюдением PSR.
 								</p>
 								<ul>
-									<li><b>Database & Persistence</b> — multiple database support with query builder and ORM, schema migrations, connection pooling, and transaction management.</li>
-									<li><b>Caching Solutions</b> — flexible caching layer with adapters for popular backends including in-memory stores, distributed caches, and file-based storage.</li>
-									<li><b>Security & Access Control</b> — complete authentication and authorization systems with role-based access control, permission management, and secure password handling.</li>
-									<li><b>Validation</b> — powerful validation framework with extensive built-in rules, custom validators, conditional validation, and error message formatting for user input verification.</li>
-									<li><b>Hydration</b> — object hydration for transforming arrays into typed objects and vice versa, ensuring type safety and seamless data mapping throughout your application.</li>
-									<li><b>View Rendering</b> — flexible template engine support with multiple rendering backends, layouts, partials, widget system, and asset management for organized frontend code.</li>
-									<li><b>Data Processing</b> — data formatters, pagination, sorting, and data provider abstractions for consistent handling across different data sources.</li>
-									<li><b>Utilities</b> — tools for arrays, strings, files, JSON, HTML generation, and network operations to simplify common programming tasks.</li>
+									<li><b>Базы данных и хранение</b> — поддержка множества БД с построителем запросов и ORM, миграции схем, пулы соединений и управление транзакциями.</li>
+									<li><b>Кэширование</b> — гибкий уровень кэширования с адаптерами для популярных хранилищ, включая память, распределенные кэши и файлы.</li>
+									<li><b>Безопасность и контроль доступа</b> — полноценные системы аутентификации и авторизации с RBAC, управлением правами и безопасной обработкой паролей.</li>
+									<li><b>Валидация</b> — мощный фреймворк валидации с обширным набором встроенных правил, пользовательскими валидаторами и условной валидацией.</li>
+									<li><b>Гидрация</b> — наполнение объектов данными (hydration) для преобразования массивов в типизированные объекты и наоборот, обеспечивая безопасность типов.</li>
+									<li><b>Рендеринг представлений</b> — поддержка различных шаблонизаторов, макеты (layouts), частичные представления (partials), система виджетов и управление ассетами.</li>
+									<li><b>Обработка данных</b> — форматирование данных, пагинация, сортировка и абстракции провайдеров данных для единообразной работы с разными источниками.</li>
+									<li><b>Утилиты</b> — инструменты для работы с массивами, строками, файлами, JSON, генерации HTML и сетевых операций.</li>
 								</ul>
-								<p>Every package is independently versioned, thoroughly documented, and available on Packagist. Install only what you need—no bloat, just solutions.</p>
+								<p>Каждый пакет имеет независимую версию, тщательно задокументирован и доступен в Packagist. Устанавливайте только то, что вам нужно.</p>
 							</div>
 						</div>
 						<div class="swiper-slide" data-feature-title="Worker Mode"
-							 data-feature-description="Run Yii3 with RoadRunner, Swoole, or FrankenPHP to boost performance by eliminating framework initialization overhead.">
+							 data-feature-description="Запускайте Yii3 с RoadRunner, Swoole или FrankenPHP для максимальной производительности без накладных расходов на инициализацию.">
 							<div class="features-content-inner prose">
 
 								<h3>Worker Mode</h3>
 								<p>
-									Traditional PHP reinitializes the framework for every request, consuming a lot of processing resources. Yii3 supports event loop operation mode where workers handle multiple requests without reinitialization, dramatically improving performance.
+									Традиционный PHP инициализирует фреймворк при каждом запросе, потребляя много ресурсов. Yii3 поддерживает режим работы с циклом событий (event loop), где воркеры обрабатывают множество запросов без повторной инициализации, что резко повышает производительность.
 								</p>
 								<p>
-									The framework handles state management automatically, ensuring each request is processed in isolation while sharing the initialized context. Workers process requests independently, delivering significant performance gains without sacrificing code quality or safety.
+									Фреймворк автоматически управляет состоянием, гарантируя изоляцию каждого запроса при совместном использовании инициализированного контекста. Воркеры обрабатывают запросы независимо, обеспечивая значительный прирост скорости без ущерба для качества или безопасности кода.
 								</p>
-								<p>Compatible with RoadRunner, Swoole, and FrankenPHP out of the box.</p>
+								<p>Совместимость с RoadRunner, Swoole и FrankenPHP из коробки.</p>
 							</div>
 						</div>
-						<div class="swiper-slide" data-feature-title="Modern PHP"
-							 data-feature-description="Built for PHP 8.2+ through 8.5, leveraging readonly classes, constructor promotion, attributes, strict typing, and advanced language features.">
+						<div class="swiper-slide" data-feature-title="Современный PHP"
+							 data-feature-description="Создан для PHP 8.2–8.5, использует readonly-классы, продвижение свойств в конструкторе, атрибуты и строгую типизацию.">
 							<div class="features-content-inner prose">
 
-								<h3>Modern PHP</h3>
+								<h3>Современный PHP</h3>
 								<p>
-									Yii3 fully embraces modern PHP capabilities, supporting PHP 8.2 through 8.5 and extensively using contemporary language features for cleaner, safer, and more maintainable code.
+									Yii3 полностью использует возможности современного PHP, поддерживая версии с 8.2 по 8.5 и активно применяя современные языковые конструкции для более чистого, безопасного и поддерживаемого кода.
 								</p>
 								<p>
-									Readonly classes with constructor property promotion eliminate boilerplate:
+									Readonly-классы и продвижение свойств в конструкторе избавляют от шаблонного кода:
 								</p>
 								<div class="code">
 									<div class="code-header">
@@ -713,21 +713,21 @@ description="PHP-фреймворк для быстрой разработки �
 									</div>
 								</div>
 								<p>
-									Strict type declarations throughout the framework catch errors at compile time. Attributes enable metadata-driven functionality. Generators optimize memory usage for large datasets. Named arguments improve configuration readability.
+									Строгие объявления типов по всему фреймворку позволяют отлавливать ошибки на этапе компиляции. Атрибуты обеспечивают функциональность на основе метаданных. Генераторы оптимизируют использование памяти для больших наборов данных. Именованные аргументы улучшают читаемость конфигурации.
 								</p>
-								<p>The codebase demonstrates modern PHP best practices, serving as a reference for writing contemporary, type-safe applications.</p>
+								<p>Кодовая база демонстрирует лучшие практики современного PHP, служа эталоном для написания современных и безопасных приложений.</p>
 							</div>
 						</div>
-						<div class="swiper-slide" data-feature-title="PSR Standards"
-							 data-feature-description="Built on PSR-7, PSR-15, PSR-3, and other interfaces, allowing seamless integration with any PHP ecosystem components.">
+						<div class="swiper-slide" data-feature-title="Стандарты PSR"
+							 data-feature-description="Построен на базе PSR-7, PSR-15, PSR-3 и других интерфейсов, что позволяет легко интегрироваться с любыми компонентами PHP-экосистемы.">
 							<div class="features-content-inner prose">
 
-								<h3>PSR Standards</h3>
+								<h3>Стандарты PSR</h3>
 								<p>
-									Yii3 extensively uses PSR interfaces, enabling you to reuse what the PHP community created and even replace core implementations when needed. The framework provides flexibility without vendor lock-in.
+									Yii3 активно использует интерфейсы PSR, что позволяет вам переиспользовать наработки PHP-сообщества и даже заменять реализации ядра при необходимости. Фреймворк обеспечивает гибкость без привязки к конкретному вендору.
 								</p>
 								<p>
-									For example, HTTP handling uses PSR-7 requests/responses and PSR-15 middleware:
+									Например, обработка HTTP использует PSR-7 (запросы/ответы) и PSR-15 (middleware):
 								</p>
 								<div class="code">
 									<div class="code-header">
@@ -745,25 +745,25 @@ description="PHP-фреймворк для быстрой разработки �
 									</div>
 								</div>
 								<p>
-									Logging follows PSR-3, caching implements PSR-16, and dependency injection uses PSR-11. This means you can drop in Monolog for logging, any PSR-16 cache adapter, or integrate third-party PSR-15 middleware from the ecosystem without friction.
+									Логирование следует PSR-3, кэширование реализует PSR-16, а внедрение зависимостей — PSR-11. Это означает, что вы можете легко подключить Monolog для логов, любой PSR-16 адаптер кэша или интегрировать стороннее PSR-15 middleware без лишних усилий.
 								</p>
-								<p>Standards-first architecture ensures your code stays portable and future-proof while maintaining full access to modern PHP tooling.</p>
+								<p>Архитектура, ориентированная на стандарты, гарантирует переносимость вашего кода и его актуальность в будущем, сохраняя доступ к современным инструментам PHP.</p>
 							</div>
 						</div>
-						<div class="swiper-slide" data-feature-title="Open PHP Ecosystem"
-							 data-feature-description="Use any Composer package, replace core implementations, integrate third-party libraries—no vendor lock-in, just standard PHP.">
+						<div class="swiper-slide" data-feature-title="Открытая экосистема PHP"
+							 data-feature-description="Используйте любые Composer-пакеты, заменяйте реализации ядра — никакого vendor lock-in, только стандартный PHP.">
 							<div class="features-content-inner prose">
 
-								<h3>Open PHP Ecosystem</h3>
+								<h3>Открытая экосистема PHP</h3>
 								<p>
-									Yii3 embraces the entire PHP ecosystem instead of reinventing the wheel. Built on PSR standards and Composer, the framework integrates seamlessly with any PHP library without forcing proprietary solutions.
+									Yii3 использует всю экосистему PHP вместо того, чтобы «изобретать велосипед». Построенный на стандартах PSR и Composer, фреймворк плавно интегрируется с любой PHP-библиотекой, не навязывая проприетарных решений.
 								</p>
 								<p>
-									Use any Composer package:
+									Используйте любые Composer-пакеты:
 								</p>
 								<div class="code">
 									<div class="code-header">
-										<div class="code-header-title">Terminal</div>
+										<div class="code-header-title">Терминал</div>
 										<div class="code-header-dots">
 											<svg xmlns="http://www.w3.org/2000/svg" width="46" height="10" fill="none" viewBox="0 0 46 10">
 												<circle cx="5" cy="5" r="5" fill="#FC615D" />
@@ -777,38 +777,38 @@ description="PHP-фреймворк для быстрой разработки �
 									</div>
 								</div>
 								<p>
-									All packages work immediately through PSR autoloading and dependency injection. Need Monolog for logging? Doctrine for ORM? Symfony components? Just install and use them.
+									Все пакеты работают сразу благодаря автозагрузке PSR и внедрению зависимостей. Нужен Monolog для логов? Doctrine как ORM? Компоненты Symfony? Просто установите и используйте их.
 								</p>
 								<p>
-									<b>Replace core implementations:</b>
-									thanks to PSR interfaces, swap built-in components for alternatives. Use Twig instead of the default template engine, Redis cache instead of file cache, or any PSR-3 logger implementation.
+									<b>Заменяйте реализации ядра:</b>
+									благодаря интерфейсам PSR вы можете менять встроенные компоненты на альтернативные. Используйте Twig вместо стандартного шаблонизатора, Redis вместо файлового кэша или любую реализацию PSR-3 логгера.
 								</p>
 								<p>
-									<b>Create and share packages:</b>
-									build reusable components as Composer packages and publish to Packagist. The framework doesn't lock you into proprietary formats—your code remains portable across projects and frameworks.
+									<b>Создавайте и делитесь пакетами:</b>
+									создавайте переиспользуемые компоненты как Composer-пакеты и публикуйте их в Packagist. Фреймворк не ограничивает вас проприетарными форматами — ваш код остается переносимым между проектами.
 								</p>
-								<p>No vendor lock-in. No proprietary APIs. Just modern PHP standards enabling you to leverage the entire ecosystem's innovation.</p>
+								<p>Никакого vendor lock-in. Никаких закрытых API. Только современные стандарты PHP, позволяющие использовать инновации всей экосистемы.</p>
 							</div>
 						</div>
-						<div class="swiper-slide" data-feature-title="Battle-Tested Quality"
-							 data-feature-description="Every package achieves ~100% coverage with PHPUnit tests, Psalm static analysis, and Infection mutation testing for uncompromising reliability.">
+						<div class="swiper-slide" data-feature-title="Проверенное качество"
+							 data-feature-description="Каждый пакет достигает ~100% покрытия тестами PHPUnit, статическим анализом Psalm и мутационным тестированием Infection.">
 							<div class="features-content-inner prose">
 
-								<h3>Battle-Tested Quality</h3>
+								<h3>Проверенное качество</h3>
 								<p>
-									Yii3 maintains exceptional code quality standards across all packages. Every line undergoes rigorous verification through multiple layers of automated testing and analysis.
+									Yii3 поддерживает исключительные стандарты качества кода во всех пакетах. Каждая строка проходит строгую проверку на нескольких уровнях автоматизированного тестирования и анализа.
 								</p>
 								<p>
-									Static analysis checks every line for type correctness and potential errors, preventing runtime failures from incorrect data types or hidden bugs before they reach production.
+									Статический анализ проверяет каждую строку на корректность типов и потенциальные ошибки, предотвращая сбои во время выполнения из-за неверных данных или скрытых багов еще до того, как код попадет в продакшн.
 								</p>
 								<p>
-									Comprehensive unit tests cover all system components, ensuring updates and modifications won't break existing functionality. Changes are validated automatically before release.
+									Комплексные юнит-тесты покрывают все компоненты системы, гарантируя, что обновления и изменения не нарушат существующую функциональность. Изменения проверяются автоматически перед выпуском.
 								</p>
 								<p>
-									Mutation testing verifies tests catch even subtle code behavior changes, protecting against non-obvious bugs.
+									Мутационное тестирование подтверждает, что тесты улавливают даже тонкие изменения в поведении кода, защищая от неочевидных багов.
 								</p>
 								<p>
-									This triple-layer quality assurance means your application runs on battle-tested foundation where potential issues are eliminated during development, not discovered in production.
+									Этот трехслойный контроль качества означает, что ваше приложение работает на надежном фундаменте, где потенциальные проблемы устраняются на этапе разработки, а не обнаруживаются в эксплуатации.
 								</p>
 							</div>
 						</div>
@@ -920,11 +920,11 @@ description="PHP-фреймворк для быстрой разработки �
 		<div class="container">
 			<div class="technologies-header">
 				<div class="technologies-header-heading">
-					<h2 class="section-title"><span class="text-orange">PHP 8</span> & APIs</h2>
+					<h2 class="section-title"><span class="text-orange">PHP 8</span> и API</h2>
 					<div class="section-descr">
 						<p>
-							Fully documented, IDE friendly.<br /> Ready to use with <strong>React,
-							Vue.js</strong> or <strong>Angular.</strong>
+							Полностью документировано, удобно для IDE.<br /> Готов к использованию с <strong>React,
+							Vue.js</strong> или <strong>Angular.</strong>
 						</p>
 					</div>
 				</div>
@@ -944,8 +944,7 @@ description="PHP-фреймворк для быстрой разработки �
 						<h3 class="heading-title">Psalm</h3>
 						<div class="heading-descr">
 							<p>
-								Every line of code is checked for data types and potential errors. This means your project won't have
-								unexpected failures due to incorrect data or hidden bugs in the code.
+								Каждая строка кода проверяется на соответствие типов данных и наличие потенциальных ошибок. Это означает, что в вашем проекте не будет неожиданных сбоев из-за некорректных данных или скрытых багов в коде.
 							</p>
 						</div>
 					</div>
@@ -958,9 +957,7 @@ description="PHP-фреймворк для быстрой разработки �
 						<h3 class="heading-title">PHPUnit</h3>
 						<div class="heading-descr">
 							<p>
-								All system components are covered by unit tests. You can be sure that with updates or code changes
-								the system will continue to work like clockwork - any problem will be caught before it reaches
-								users.
+								Все системные компоненты покрыты юнит-тестами. Вы можете быть уверены, что при обновлениях или изменениях кода система продолжит работать как часы — любая проблема будет поймана до того, как она попадет к пользователям.
 							</p>
 						</div>
 					</div>
@@ -973,8 +970,7 @@ description="PHP-фреймворк для быстрой разработки �
 						<h3 class="heading-title">Infection MSI</h3>
 						<div class="heading-descr">
 							<p>
-								Tests successfully catch even the slightest deviations in code behavior. This ensures that your application
-								is protected from non-obvious bugs and always works exactly as intended.
+								Тесты успешно отлавливают даже малейшие отклонения в поведении кода. Это гарантирует, что ваше приложение защищено от неочевидных багов и всегда работает именно так, как было задумано.
 							</p>
 						</div>
 					</div>
@@ -988,7 +984,7 @@ description="PHP-фреймворк для быстрой разработки �
 		<div class="container">
 			<div class="testimonials-community">
 				<div class="testimonials-community-heading">
-					Join the&nbsp;growing community&nbsp;
+					Присоединяйтесь к&nbsp;сообществу&nbsp;
 					<div class="yii-logo">
 						<svg xmlns="http://www.w3.org/2000/svg" width="39" height="48" fill="none" viewBox="0 0 39 48">
 							<path fill="#40B3D8"
@@ -1005,10 +1001,10 @@ description="PHP-фреймворк для быстрой разработки �
 					</div>
 				</div>
 				<div class="testimonials-community-descr">
-					<p>Build performant and functional<br> web applications with confidence.</p>
+					<p>Создавайте высокопроизводительные<br> веб-приложения с уверенностью.</p>
 				</div>
 				<div class="testimonials-community-btn">
-					<a href="https://yiisoft.github.io/docs/guide/start/creating-project.html" class="btn btn-gradient">Get Started</a>
+					<a href="https://yiisoft.github.io/docs/guide/start/creating-project.html" class="btn btn-gradient">Начать работу</a>
 				</div>
 			</div>
 
@@ -1028,13 +1024,12 @@ description="PHP-фреймворк для быстрой разработки �
 					<div class="number-value">34k+</div>
 				</div>
 				<div class="heading">
-					<h3 class="heading-title">GitHub Stars</h3>
+					<h3 class="heading-title">Звёзд на GitHub</h3>
 					<div class="heading-descr">
 						<p>
-							This is the total number of stars across all repositories in the
-							<a href="https://github.com/yiisoft">yiisoft</a>
-							organization.
-							It's not only an indicator of quality, but also active community support that helps the project develop and improve. Join us too!
+							Это общее количество звёзд во всех репозиториях организации
+							<a href="https://github.com/yiisoft">yiisoft</a>.
+							Это не только показатель качества, но и активная поддержка сообщества, которая помогает проекту развиваться. Присоединяйтесь и вы!
 						</p>
 					</div>
 				</div>
@@ -1044,14 +1039,14 @@ description="PHP-фреймворк для быстрой разработки �
 					<div class="number-value">33M+</div>
 				</div>
 				<div class="heading">
-					<h3 class="heading-title">Active Installations</h3>
+					<h3 class="heading-title">Активных установок</h3>
 					<div class="heading-descr">
 						<p>
-							This is the total number of installations for
+							Это общее количество установок пакетов
 							<a href="https://packagist.org/packages/yiisoft/yii">yiisoft/yii</a>
-							and
-							<a href="https://packagist.org/packages/yiisoft/yii2">yiisoft/yii2</a>
-							packages. This huge number speaks for itself. Yii3 is the culmination of 17 years of our experience.
+							и
+							<a href="https://packagist.org/packages/yiisoft/yii2">yiisoft/yii2</a>.
+							Это внушительное число говорит само за себя. Yii3 — это кульминация нашего 17-летнего опыта.
 						</p>
 					</div>
 				</div>
@@ -1062,13 +1057,13 @@ description="PHP-фреймворк для быстрой разработки �
 				<h5 class="footer-main-title">Yii 1.1</h5>
 				<ul class="footer-nav">
 					<li>
-						<a href="https://www.yiiframework.com/doc/guide/1.1/">Guide</a>
+						<a href="https://www.yiiframework.com/doc/guide/1.1/">Руководство</a>
 					</li>
 					<li>
 						<a href="https://www.yiiframework.com/doc/api/1.1">API</a>
 					</li>
 					<li>
-						<a href="https://www.yiiframework.com/wiki?version=1.1">Wiki</a>
+						<a href="https://www.yiiframework.com/wiki?version=1.1">Вики</a>
 					</li>
 				</ul>
 			</div>
@@ -1076,13 +1071,13 @@ description="PHP-фреймворк для быстрой разработки �
 				<h5 class="footer-main-title">Yii2</h5>
 				<ul class="footer-nav">
 					<li>
-						<a href="https://www.yiiframework.com/doc/guide/2.0/">Guide</a>
+						<a href="https://www.yiiframework.com/doc/guide/2.0/">Руководство</a>
 					</li>
 					<li>
 						<a href="https://www.yiiframework.com/doc/api/2.0">API</a>
 					</li>
 					<li>
-						<a href="https://www.yiiframework.com/wiki">Wiki</a>
+						<a href="https://www.yiiframework.com/wiki">Вики</a>
 					</li>
 				</ul>
 			</div>
@@ -1090,21 +1085,21 @@ description="PHP-фреймворк для быстрой разработки �
 				<h5 class="footer-main-title">Yii3</h5>
 				<ul class="footer-nav">
 					<li>
-						<a href="https://yiisoft.github.io/docs/guide/">Guide</a>
+						<a href="https://yiisoft.github.io/docs/guide/">Руководство</a>
 					</li>
 					<li>
-						<a href="https://yiisoft.github.io/docs/cookbook/">Cookbook</a>
+						<a href="https://yiisoft.github.io/docs/cookbook/">Книга рецептов</a>
 					</li>
 				</ul>
 			</div>
 			<div class="footer-main-col">
-				<h5 class="footer-main-title">Community</h5>
+				<h5 class="footer-main-title">Сообщество</h5>
 				<ul class="footer-nav">
 					<li>
-						<a href="https://www.yiiframework.com/community">All resources</a>
+						<a href="https://www.yiiframework.com/community">Все ресурсы</a>
 					</li>
 					<li>
-						<a href="https://t.me/yii3en" target="_blank" rel="noopener noreferrer">Telegram Group</a>
+						<a href="https://t.me/yii3en" target="_blank" rel="noopener noreferrer">Telegram-группа</a>
 					</li>
 					<li>
 						<a href="https://twitter.com/yiiframework" target="_blank" rel="noopener noreferrer">Twitter</a>
@@ -1139,7 +1134,7 @@ description="PHP-фреймворк для быстрой разработки �
 						<a href="https://www.yiiframework.com/">yiiframework.com</a>
 					</li>
 					<li>
-						<a href="https://www.yiiframework.com/license">License</a>
+						<a href="https://www.yiiframework.com/license">Лицензия</a>
 					</li>
 				</ul>
 				<div class="footer-main-copyright">&copy; 2008 – 2025 Yii.</div>
