@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru">
 {{> head
-	title="Yii3 Framework"
-	description="PHP фреймворк для быстрого создания современных приложений."
+title="Фреймворк Yii3"
+description="PHP фреймворк для быстрой разработки современных приложений."
 }}
 <body>
 <!-- Header -->
@@ -44,17 +44,16 @@
 			<ul class="header-nav" :class="showNavigation && '_is-shown'">
 				<li><a href="#advantages" @click="showNavigation = false">Преимущества</a></li>
 				<li><a href="#features" @click="showNavigation = false">Возможности</a></li>
-				<li><a href="#companies" @click="showNavigation = false">Пример использования</a></li>
-				<li><a href="#testimonials" @click="showNavigation = false">Комьюнити</a></li>
+				<li><a href="#testimonials" @click="showNavigation = false">Сообщество</a></li>
 			</ul>
 			<div class="header-actions">
 				<div class="header-actions-item">
-					<a href="#" class="github" target="_blank" rel="noopener">
+					<a href="https://github.com/yiisoft" class="github" target="_blank" rel="noopener">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
 							<path
 								d="M10 .248c-5.525 0-10 4.477-10 10a9.998 9.998 0 0 0 6.838 9.487c.5.094.683-.215.683-.48 0-.238-.008-.867-.013-1.7-2.781.602-3.368-1.343-3.368-1.343-.455-1.154-1.112-1.462-1.112-1.462-.906-.62.07-.607.07-.607 1.004.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.913.831.09-.647.347-1.087.633-1.337-2.22-.25-4.555-1.11-4.555-4.942 0-1.092.388-1.983 1.03-2.683-.113-.253-.45-1.27.087-2.647 0 0 .837-.268 2.75 1.025.8-.223 1.65-.332 2.5-.338.85.006 1.7.115 2.5.338 1.9-1.293 2.737-1.025 2.737-1.025.538 1.378.2 2.394.1 2.647.638.7 1.025 1.591 1.025 2.683 0 3.842-2.337 4.688-4.562 4.933.35.3.675.914.675 1.85 0 1.339-.013 2.414-.013 2.739 0 .262.175.575.688.475A9.966 9.966 0 0 0 20 10.247c0-5.522-4.477-10-10-10Z" />
 						</svg>
-						<span>14k+</span>
+						<span>34k+</span>
 					</a>
 				</div>
 				<div class="header-actions-item">
@@ -74,8 +73,8 @@
 							</svg>
 						</button>
 						<ul class="languages-dropdown" x-show="showLanguagesDropdown" x-cloak>
-							<li><a href="/">English</a></li>
-							<li><a href="/ru.html" class="_is-active">Русский</a></li>
+							<li><a href="index.html">English</a></li>
+							<li><a href="ru.html" class="_is-active">Русский</a></li>
 						</ul>
 					</div>
 				</div>
@@ -107,7 +106,7 @@
 							<rect width="20" height="1.5" x="2.398" y="14.541" rx=".75" transform="rotate(-45 2.398 14.54)" />
 						</svg>
 					</button>
-					<a href="#" class="try-btn btn btn-gradient btn-sm">Попробовать Yii</a>
+					<a href="https://yiisoft.github.io/docs/guide/start/creating-project.html" class="try-btn btn btn-gradient btn-sm">Попробовать Yii</a>
 				</div>
 			</div>
 		</div>
@@ -124,32 +123,32 @@
 					Yii3.
 					<span
 						data-words='["Безопасный.", "text-green"], ["Современный.", "text-blue"], ["Производительный.", "text-orange"]'></span><em
-						class="cursor">_</em>
+					class="cursor">_</em>
 				</h1>
 				<div class="description">
-					<p>PHP фреймворк для быстрого создания современных приложений.</p>
+					<p>PHP фреймворк для быстрой разработки современных приложений.</p>
 				</div>
 				<div class="buttons">
-					<a href="#" class="btn btn-gradient">Начать использовать</a>
-					<a href="#" class="btn btn-outline">Смотреть демо-пример</a>
+					<a href="https://yiisoft.github.io/docs/guide/start/creating-project.html" class="btn btn-gradient">Начать</a>
+					<a href="https://github.com/yiisoft/demo-diary" class="btn btn-outline">Смотреть демо</a>
 				</div>
 
 				<!-- Leafs -->
 				<svg class="leaf leaf-green" data-depth="0.8" xmlns="http://www.w3.org/2000/svg" width="103" height="97"
-					fill="none" viewBox="0 0 103 97">
+					 fill="none" viewBox="0 0 103 97">
 					<path fill="#83C933"
-						d="M102.669 77.331c-1.152-15.595-6.054-25.703-8.44-31.433-2.386-5.728-6.055-11.09-6.057-11.081l-.001.004v-.004l-.875-1.337C68.096 5.822 31.272-7.987.16 4.812-1.339 24.2 7.42 57.555 39.375 66.86c12.918 4.078 23.263 3.02 35.94 6.557v.001s12.887 4.609 20.384 11.52c3.372 3.108 6.749 7.198 6.579 12.063 1.068-11.578.726-15.12.391-19.669Z" />
+						  d="M102.669 77.331c-1.152-15.595-6.054-25.703-8.44-31.433-2.386-5.728-6.055-11.09-6.057-11.081l-.001.004v-.004l-.875-1.337C68.096 5.822 31.272-7.987.16 4.812-1.339 24.2 7.42 57.555 39.375 66.86c12.918 4.078 23.263 3.02 35.94 6.557v.001s12.887 4.609 20.384 11.52c3.372 3.108 6.749 7.198 6.579 12.063 1.068-11.578.726-15.12.391-19.669Z" />
 				</svg>
 				<svg class="leaf leaf-orange" data-depth="0.4" xmlns="http://www.w3.org/2000/svg" width="44" height="99"
-					fill="none" viewBox="0 0 44 99">
+					 fill="none" viewBox="0 0 44 99">
 					<path fill="#F18A2A" fill-rule="evenodd"
-						d="M2.008 43.586C-1.798 32.28-.185 24.704 6.778 14.161 10.1 9.131 15.833 3.296 20.86 0c20.277 12.9 27.775 36.93 20.317 59.247C35.75 75.485 30.658 82.293 17.783 99c1.5-17.893-4.702-30.298-10.791-44.081-1.55-3.507-3.694-7.5-4.984-11.333Z"
-						clip-rule="evenodd" />
+						  d="M2.008 43.586C-1.798 32.28-.185 24.704 6.778 14.161 10.1 9.131 15.833 3.296 20.86 0c20.277 12.9 27.775 36.93 20.317 59.247C35.75 75.485 30.658 82.293 17.783 99c1.5-17.893-4.702-30.298-10.791-44.081-1.55-3.507-3.694-7.5-4.984-11.333Z"
+						  clip-rule="evenodd" />
 				</svg>
 				<svg class="leaf leaf-blue" data-depth="0.2" xmlns="http://www.w3.org/2000/svg" width="44" height="102"
-					fill="none" viewBox="0 0 44 102">
+					 fill="none" viewBox="0 0 44 102">
 					<path fill="#40B3D8"
-						d="M43.679 40.794c-1.122-14.963-5.899-24.663-8.225-30.16C33.13 5.136 29.555-.01 29.553 0c-.007.023-3.219 17.51-8.993 30.163-.963 2.113-2.244 4.751-3.535 6.876-3.987 7.111-9.77 13.915-13.218 20.811C.39 64.685-.245 71.454.073 79.15c.32 7.737 2.09 15.327 3.788 22.85 6.403-1.396 11.976-3.784 16.797-6.838C33.345 87.125 41.01 74.27 43.19 60.42c0 0 .106-.562.153-1.248.982-10.704.658-14.081.336-18.378Z" />
+						  d="M43.679 40.794c-1.122-14.963-5.899-24.663-8.225-30.16C33.13 5.136 29.555-.01 29.553 0c-.007.023-3.219 17.51-8.993 30.163-.963 2.113-2.244 4.751-3.535 6.876-3.987 7.111-9.77 13.915-13.218 20.811C.39 64.685-.245 71.454.073 79.15c.32 7.737 2.09 15.327 3.788 22.85 6.403-1.396 11.976-3.784 16.797-6.838C33.345 87.125 41.01 74.27 43.19 60.42c0 0 .106-.562.153-1.248.982-10.704.658-14.081.336-18.378Z" />
 				</svg>
 			</div>
 		</div>
@@ -158,18 +157,21 @@
 	<!-- Section: Companies -->
 	<section class="companies" id="companies">
 		<div class="container">
-			<div class="companies-heading">Yii уже выбрали эти крупнейшие компании. <strong>А чего ждёте Вы?</strong></div>
+			<div class="companies-heading">Эти крупные компании уже выбрали Yii 1.1 и Yii 2.0. <strong>Yii3 выводит это на новый уровень!</strong></div>
 		</div>
 		<div class="companies-logos">
 			<div class="companies-track">
+				<div class="companies-logo">
+					<img src="./images/companies/kia.svg" alt="KIA">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/feniex.png" alt="Feniex">
+				</div>
 				<div class="companies-logo">
 					<img src="./images/companies/robot.svg" alt="iRobot">
 				</div>
 				<div class="companies-logo">
 					<img src="./images/companies/humhub.png" alt="HumHub">
-				</div>
-				<div class="companies-logo">
-					<img src="./images/companies/kia.svg" alt="KIA">
 				</div>
 				<div class="companies-logo">
 					<img src="./images/companies/craft-cms.svg" alt="Craft CMS">
@@ -179,6 +181,33 @@
 				</div>
 				<div class="companies-logo">
 					<img src="./images/companies/skillshare.svg" alt="Skillshare">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/klaviyo.png" alt="Klaviyo">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/zapier.png" alt="Zapier">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/vivint.png" alt="Vivint">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/jayco.png" alt="Jayco">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/luya.png" alt="LUYA">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/realself.png" alt="RealSelf">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/sonicelectronix.png" alt="Sonic Electronix">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/spinitron.png" alt="Spinitron">
+				</div>
+				<div class="companies-logo">
+					<img src="./images/companies/vice.png" alt="VICE">
 				</div>
 			</div>
 		</div>
@@ -195,93 +224,99 @@
 					<div class="icon">
 						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
 							<path fill-rule="evenodd"
-								d="M18.667 8.167H9.333c-.644 0-1.166.522-1.166 1.166v9.334c0 .644.522 1.166 1.166 1.166h9.334c.644 0 1.166-.522 1.166-1.166V9.333c0-.644-.522-1.166-1.166-1.166ZM9.333 5.833a3.5 3.5 0 0 0-3.5 3.5v9.334a3.5 3.5 0 0 0 3.5 3.5h9.334a3.5 3.5 0 0 0 3.5-3.5V9.333a3.5 3.5 0 0 0-3.5-3.5H9.333Z"
-								clip-rule="evenodd" />
+								  d="M18.667 8.167H9.333c-.644 0-1.166.522-1.166 1.166v9.334c0 .644.522 1.166 1.166 1.166h9.334c.644 0 1.166-.522 1.166-1.166V9.333c0-.644-.522-1.166-1.166-1.166ZM9.333 5.833a3.5 3.5 0 0 0-3.5 3.5v9.334a3.5 3.5 0 0 0 3.5 3.5h9.334a3.5 3.5 0 0 0 3.5-3.5V9.333a3.5 3.5 0 0 0-3.5-3.5H9.333Z"
+								  clip-rule="evenodd" />
 							<path fill-rule="evenodd"
-								d="M12.833 12.833v2.334h2.334v-2.334h-2.334ZM11.667 10.5c-.645 0-1.167.522-1.167 1.167v4.666c0 .645.522 1.167 1.167 1.167h4.666c.645 0 1.167-.522 1.167-1.167v-4.666c0-.645-.522-1.167-1.167-1.167h-4.666Z"
-								clip-rule="evenodd" />
+								  d="M12.833 12.833v2.334h2.334v-2.334h-2.334ZM11.667 10.5c-.645 0-1.167.522-1.167 1.167v4.666c0 .645.522 1.167 1.167 1.167h4.666c.645 0 1.167-.522 1.167-1.167v-4.666c0-.645-.522-1.167-1.167-1.167h-4.666Z"
+								  clip-rule="evenodd" />
 							<path
 								d="M10.5 2.333c-.644 0-1.167.523-1.167 1.167v2.333h2.334V3.5c0-.644-.523-1.167-1.167-1.167ZM11.667 24.5v-2.333H9.333V24.5a1.167 1.167 0 1 0 2.334 0Zm4.666-21a1.167 1.167 0 1 1 2.334 0v2.333h-2.334V3.5Zm2.334 21v-2.333h-2.334V24.5a1.167 1.167 0 1 0 2.334 0ZM24.5 9.333a1.167 1.167 0 0 1 0 2.334h-2.333V9.333H24.5Zm-21 2.334h2.333V9.333H3.5a1.167 1.167 0 1 0 0 2.334Zm21 4.666a1.167 1.167 0 1 1 0 2.334h-2.333v-2.334H24.5Zm-21 2.334h2.333v-2.334H3.5a1.167 1.167 0 1 0 0 2.334Z" />
 						</svg>
 					</div>
-					<h3 class="title">Modern Rapid Development</h3>
+					<h3 class="title">Современная быстрая разработка</h3>
 					<div class="description">
-						<p>Yii3 предоставляет мощные инструменты для быстрого создания современных веб-приложений, включая
-							генераторы кода и готовые компоненты. Интеграция с новейшими PHP-технологиями позволяют разработчикам
-							сосредоточиться на бизнес-логике, а не на рутинных задачах.</p>
+						<p>
+							Yii3 предоставляет мощные инструменты для быстрого создания современных веб-приложений,
+							включая генераторы кода и готовые компоненты.
+							Интеграция с новейшими PHP-технологиями позволяет разработчикам сосредоточиться на бизнес-
+							логике, а не на рутинных задачах.
+						</p>
 					</div>
 				</div>
 				<div class="advantages-item advantages-item--green">
 					<div class="icon">
 						<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none" viewBox="0 0 29 28">
 							<path fill-rule="evenodd"
-								d="M11.44 10.422a.817.817 0 0 1-.689.5l-5.54.442a.817.817 0 0 0-.466 1.436l4.217 3.598c.234.2.336.513.264.811l-1.289 5.384a.817.817 0 0 0 1.219.888l4.75-2.89a.816.816 0 0 1 .849 0l4.75 2.89a.817.817 0 0 0 1.218-.888l-1.289-5.384a.817.817 0 0 1 .264-.811l4.217-3.598a.817.817 0 0 0-.465-1.436l-5.54-.442a.817.817 0 0 1-.69-.5l-2.136-5.117a.817.817 0 0 0-1.507 0l-2.137 5.117Zm7.577-1.752-1.78-4.264c-1.078-2.582-4.736-2.582-5.814 0L9.643 8.67l-4.618.369c-2.797.223-3.928 3.715-1.794 5.536l3.51 2.995-1.073 4.48c-.652 2.723 2.308 4.88 4.7 3.424l3.962-2.41 3.962 2.41c2.392 1.456 5.353-.701 4.7-3.425l-1.072-4.48 3.51-2.994c2.134-1.821 1.002-5.313-1.794-5.536l-4.619-.37Z"
-								clip-rule="evenodd" />
+								  d="M11.44 10.422a.817.817 0 0 1-.689.5l-5.54.442a.817.817 0 0 0-.466 1.436l4.217 3.598c.234.2.336.513.264.811l-1.289 5.384a.817.817 0 0 0 1.219.888l4.75-2.89a.816.816 0 0 1 .849 0l4.75 2.89a.817.817 0 0 0 1.218-.888l-1.289-5.384a.817.817 0 0 1 .264-.811l4.217-3.598a.817.817 0 0 0-.465-1.436l-5.54-.442a.817.817 0 0 1-.69-.5l-2.136-5.117a.817.817 0 0 0-1.507 0l-2.137 5.117Zm7.577-1.752-1.78-4.264c-1.078-2.582-4.736-2.582-5.814 0L9.643 8.67l-4.618.369c-2.797.223-3.928 3.715-1.794 5.536l3.51 2.995-1.073 4.48c-.652 2.723 2.308 4.88 4.7 3.424l3.962-2.41 3.962 2.41c2.392 1.456 5.353-.701 4.7-3.425l-1.072-4.48 3.51-2.994c2.134-1.821 1.002-5.313-1.794-5.536l-4.619-.37Z"
+								  clip-rule="evenodd" />
 						</svg>
 					</div>
-					<h3 class="title">High quality code</h3>
+					<h3 class="title">Высокое качество кода</h3>
 					<div class="description">
-						<p>Yii3 способствует написанию чистого, поддерживаемого кода, следуя лучшим практикам и паттернам
-							проектирования. Фреймворк следует PSR стандартам (PHP-FIG), обеспечивая совместимость с другими
-							библиотеками и инструментами. Встроенные инструменты для тестирования, отладки и статического анализа
-							помогают поддерживать высокое качество кода на протяжении всего жизненного цикла проекта.</p>
+						<p>
+							Yii3 способствует написанию чистого, поддерживаемого кода, следуя лучшим практикам и паттернам
+							проектирования. Фреймворк следует стандартам PSR (PHP-FIG), обеспечивая совместимость с другими
+							библиотеками и инструментами. Встроенные инструменты для тестирования, отладки и статического анализа помогают поддерживать
+							высокое качество кода на протяжении всего жизненного цикла проекта.
+						</p>
 					</div>
 				</div>
 				<div class="advantages-item advantages-item--blue">
 					<div class="icon">
 						<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none" viewBox="0 0 29 28">
 							<path fill-rule="evenodd"
-								d="M2.663 7c0-.644.523-1.167 1.167-1.167h15.167a3.5 3.5 0 0 1 3.5 3.5V24.5a1.167 1.167 0 0 1-2.334 0V9.333c0-.644-.522-1.166-1.166-1.166H3.83A1.167 1.167 0 0 1 2.663 7Z"
-								clip-rule="evenodd" />
+								  d="M2.663 7c0-.644.523-1.167 1.167-1.167h15.167a3.5 3.5 0 0 1 3.5 3.5V24.5a1.167 1.167 0 0 1-2.334 0V9.333c0-.644-.522-1.166-1.166-1.166H3.83A1.167 1.167 0 0 1 2.663 7Z"
+								  clip-rule="evenodd" />
 							<path fill-rule="evenodd"
-								d="M25.997 21c0 .644-.523 1.167-1.167 1.167H9.663a3.5 3.5 0 0 1-3.5-3.5V3.5a1.167 1.167 0 1 1 2.334 0v15.167c0 .644.522 1.166 1.166 1.166H24.83c.645 0 1.167.523 1.167 1.167Z"
-								clip-rule="evenodd" />
+								  d="M25.997 21c0 .644-.523 1.167-1.167 1.167H9.663a3.5 3.5 0 0 1-3.5-3.5V3.5a1.167 1.167 0 1 1 2.334 0v15.167c0 .644.522 1.166 1.166 1.166H24.83c.645 0 1.167.523 1.167 1.167Z"
+								  clip-rule="evenodd" />
 						</svg>
 					</div>
-					<h3 class="title">Scales well</h3>
+					<h3 class="title">Хорошая масштабируемость</h3>
 					<div class="description">
-						<p>Yii3 предоставляет мощные инструменты для быстрого создания современных веб-приложений, включая
-							генераторы кода и готовые компоненты. Интеграция с новейшими PHP-технологиями позволяют разработчикам
-							сосредоточиться на бизнес-логике, а не на рутинных задачах.</p>
+						<p>
+							Yii3 предназначен для работы с проектами любого размера, от небольших приложений до высоконагруженных
+							корпоративных систем. Встроенное кеширование, оптимизация базы данных и эффективное управление ресурсами
+							обеспечивают отличную производительность по мере роста вашего приложения.
+						</p>
 					</div>
 				</div>
 				<div class="advantages-item advantages-item--orange">
 					<div class="icon">
 						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
 							<path fill-rule="evenodd"
-								d="M14 12.833c-2.068 0-3.91.076-5.415.171a2.779 2.779 0 0 0-2.628 2.598 43.422 43.422 0 0 0-.124 3.065c0 .994.051 2.056.124 3.064a2.778 2.778 0 0 0 2.628 2.598 85.772 85.772 0 0 0 10.83 0 2.778 2.778 0 0 0 2.628-2.598c.073-1.008.124-2.07.124-3.064 0-.994-.051-2.057-.124-3.065a2.778 2.778 0 0 0-2.628-2.598 85.846 85.846 0 0 0-5.415-.17Zm-5.563-2.157a5.112 5.112 0 0 0-4.807 4.758 45.736 45.736 0 0 0-.13 3.233c0 1.067.054 2.189.13 3.233a5.111 5.111 0 0 0 4.807 4.758 88.094 88.094 0 0 0 11.126 0A5.111 5.111 0 0 0 24.37 21.9c.076-1.044.13-2.166.13-3.233 0-1.068-.054-2.19-.13-3.233a5.112 5.112 0 0 0-4.807-4.758 88.092 88.092 0 0 0-11.126 0Z"
-								clip-rule="evenodd" />
+								  d="M14 12.833c-2.068 0-3.91.076-5.415.171a2.779 2.779 0 0 0-2.628 2.598 43.422 43.422 0 0 0-.124 3.065c0 .994.051 2.056.124 3.064a2.778 2.778 0 0 0 2.628 2.598 85.772 85.772 0 0 0 10.83 0 2.778 2.778 0 0 0 2.628-2.598c.073-1.008.124-2.07.124-3.064 0-.994-.051-2.057-.124-3.065a2.778 2.778 0 0 0-2.628-2.598 85.846 85.846 0 0 0-5.415-.17Zm-5.563-2.157a5.112 5.112 0 0 0-4.807 4.758 45.736 45.736 0 0 0-.13 3.233c0 1.067.054 2.189.13 3.233a5.111 5.111 0 0 0 4.807 4.758 88.094 88.094 0 0 0 11.126 0A5.111 5.111 0 0 0 24.37 21.9c.076-1.044.13-2.166.13-3.233 0-1.068-.054-2.19-.13-3.233a5.112 5.112 0 0 0-4.807-4.758 88.092 88.092 0 0 0-11.126 0Z"
+								  clip-rule="evenodd" />
 							<path fill-rule="evenodd"
-								d="M15.167 19.521A2.332 2.332 0 0 0 14 15.167a2.333 2.333 0 0 0-1.167 4.354V21a1.167 1.167 0 0 0 2.334 0v-1.479ZM8.167 7a5.833 5.833 0 1 1 11.666 0v4.667a1.167 1.167 0 1 1-2.333 0V7a3.5 3.5 0 1 0-7 0v4.667a1.167 1.167 0 1 1-2.333 0V7Z"
-								clip-rule="evenodd" />
+								  d="M15.167 19.521A2.332 2.332 0 0 0 14 15.167a2.333 2.333 0 0 0-1.167 4.354V21a1.167 1.167 0 0 0 2.334 0v-1.479ZM8.167 7a5.833 5.833 0 1 1 11.666 0v4.667a1.167 1.167 0 1 1-2.333 0V7a3.5 3.5 0 1 0-7 0v4.667a1.167 1.167 0 1 1-2.333 0V7Z"
+								  clip-rule="evenodd" />
 						</svg>
 					</div>
-					<h3 class="title">Built-in security</h3>
+					<h3 class="title">Встроенная безопасность</h3>
 					<div class="description">
-						<p>Yii3 обеспечивает надежную защиту веб-приложений благодаря встроенным механизмам безопасности, которые
-							противодействуют распространенным угрозам, таким как XSS, CSRF и SQL-инъекции. Регулярные обновления и
-							следование лучшим практикам в области безопасности позволяют разработчикам создавать защищенные
-							приложения
-							с минимальными дополнительными усилиями.</p>
+						<p>
+							Yii3 обеспечивает надежную защиту веб-приложений благодаря встроенным механизмам безопасности,
+							которые противостоят распространенным угрозам, таким как XSS, CSRF и SQL-инъекции. Регулярные обновления
+							и соблюдение лучших практик безопасности позволяют разработчикам создавать безопасные приложения
+							с минимальными дополнительными усилиями.
+						</p>
 					</div>
 				</div>
 				<div class="advantages-item advantages-item--green">
 					<div class="icon">
 						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
 							<path fill-rule="evenodd"
-								d="M17.5 22.993a8.172 8.172 0 0 0 5.493-5.493H17.5v5.493Zm-1.17 2.609c-.64.071-1.163-.458-1.163-1.102v-8.167c0-.644.522-1.166 1.166-1.166H24.5c.644 0 1.173.524 1.102 1.164a10.498 10.498 0 0 1-9.271 9.27ZM22.993 10.5a8.15 8.15 0 0 0-2.052-3.441A8.168 8.168 0 0 0 17.5 5.007V10.5h5.493Zm2.609 1.17c.071.64-.458 1.163-1.102 1.163h-8.167a1.167 1.167 0 0 1-1.166-1.166V3.5c0-.644.524-1.173 1.164-1.102a10.5 10.5 0 0 1 9.27 9.271ZM10.5 6.174a8.166 8.166 0 0 0 0 15.652V6.174Zm1.169-2.61c.64-.07 1.164.458 1.164 1.103v18.666c0 .645-.524 1.174-1.164 1.102a10.5 10.5 0 0 1 0-20.87Z"
-								clip-rule="evenodd" />
+								  d="M17.5 22.993a8.172 8.172 0 0 0 5.493-5.493H17.5v5.493Zm-1.17 2.609c-.64.071-1.163-.458-1.163-1.102v-8.167c0-.644.522-1.166 1.166-1.166H24.5c.644 0 1.173.524 1.102 1.164a10.498 10.498 0 0 1-9.271 9.27ZM22.993 10.5a8.15 8.15 0 0 0-2.052-3.441A8.168 8.168 0 0 0 17.5 5.007V10.5h5.493Zm2.609 1.17c.071.64-.458 1.163-1.102 1.163h-8.167a1.167 1.167 0 0 1-1.166-1.166V3.5c0-.644.524-1.173 1.164-1.102a10.5 10.5 0 0 1 9.27 9.271ZM10.5 6.174a8.166 8.166 0 0 0 0 15.652V6.174Zm1.169-2.61c.64-.07 1.164.458 1.164 1.103v18.666c0 .645-.524 1.174-1.164 1.102a10.5 10.5 0 0 1 0-20.87Z"
+								  clip-rule="evenodd" />
 						</svg>
 					</div>
-					<h3 class="title">Component-based Architecture</h3>
+					<h3 class="title">Компонентная архитектура</h3>
 					<div class="description">
-						<p>Yii3 построен на основе независимых компонентов, которые можно использовать как вместе, так и по
-							отдельности:</p>
+						<p>Yii3 построен на независимых компонентах, которые можно использовать вместе или отдельно:</p>
 						<ul>
 							<li>Возможность использовать отдельные пакеты Yii3 в любых проектах</li>
-							<li>Создание собственного фреймворка на базе компонентов Yii3</li>
-							<li>Все компоненты следуют PSR стандартам, обеспечивая отличную совместимость</li>
-							<li>Подход, схожий с Symfony, позволяющий интегрировать компоненты в любые PHP проекты</li>
+							<li>Создайте свой собственный фреймворк на основе компонентов Yii3</li>
+							<li>Все компоненты следуют стандартам PSR, обеспечивая отличную совместимость</li>
 						</ul>
 					</div>
 				</div>
@@ -292,26 +327,25 @@
 								d="M3.833 10.5C4.477 10.5 5 9.978 5 9.333v-3.5c0-.644.522-1.166 1.167-1.166h3.5a1.167 1.167 0 0 0 0-2.334h-3.5a3.5 3.5 0 0 0-3.5 3.5v3.5c0 .645.522 1.167 1.166 1.167ZM5 18.667a1.167 1.167 0 0 0-2.333 0v3.5a3.5 3.5 0 0 0 3.5 3.5h3.5a1.167 1.167 0 0 0 0-2.334h-3.5A1.167 1.167 0 0 1 5 22.167v-3.5Zm18.666 0a1.167 1.167 0 0 1 2.334 0v3.5a3.5 3.5 0 0 1-3.5 3.5H19a1.167 1.167 0 0 1 0-2.334h3.5c.644 0 1.166-.522 1.166-1.166v-3.5Zm0-9.334a1.167 1.167 0 1 0 2.334 0v-3.5a3.5 3.5 0 0 0-3.5-3.5H19a1.167 1.167 0 0 0 0 2.334h3.5c.644 0 1.166.522 1.166 1.166v3.5Z" />
 						</svg>
 					</div>
-					<h3 class="title">Flexibility</h3>
+					<h3 class="title">Гибкость</h3>
 					<div class="description">
-						<p>Yii3 адаптируется под ваши потребности, а не наоборот:</p>
+						<p>Yii3 адаптируется к вашим потребностям, а не наоборот:</p>
 						<ul>
-							<li>Поддержка различных структур приложения</li>
-							<li>Возможность организовать код так, как удобно вашей команде</li>
-							<li>Легкая интеграция с существующими проектами и сторонними библиотеками</li>
-							<li>Свобода в выборе инструментов и подходов к разработке</li>
+							<li>Поддержка различных структур приложений</li>
+							<li>Организуйте код так, как это подходит вашей команде</li>
+							<li>Простая интеграция с существующими проектами и сторонними библиотеками</li>
+							<li>Свобода выбора инструментов и подходов к разработке</li>
 						</ul>
-						<p>Выберите Yii3 для вашего следующего проекта и ощутите силу современной PHP разработки!</p>
 					</div>
 				</div>
 			</div>
 
 			<!-- Illustration -->
 			<svg class="advantages-circles" width="937" height="470" viewBox="0 0 937 470" fill="none"
-				xmlns="http://www.w3.org/2000/svg">
+				 xmlns="http://www.w3.org/2000/svg">
 				<g clip-path="url(#clip0_138_1969)">
 					<mask id="mask0_138_1969" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="937"
-						height="939">
+						  height="939">
 						<path opacity="0.25" d="M937 0.332703H0V938.112H937V0.332703Z" fill="url(#paint0_linear_138_1969)" />
 					</mask>
 					<g id="svg-circles" mask="url(#mask0_138_1969)">
@@ -343,54 +377,54 @@
 				</g>
 				<defs>
 					<linearGradient id="paint0_linear_138_1969" x1="469" y1="-15.5" x2="469" y2="938"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="white" />
 						<stop offset="0.503901" stop-color="white" stop-opacity="0" />
 					</linearGradient>
 					<linearGradient id="paint1_linear_138_1969" x1="410.548" y1="469.222" x2="526.453" y2="469.222"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="#F18A2A" />
 						<stop offset="0.4" stop-color="#83C933" />
 						<stop offset="0.8" stop-color="#40B3D8" />
 					</linearGradient>
 					<linearGradient id="paint2_linear_138_1969" x1="351.985" y1="469.222" x2="585.015" y2="469.222"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="#F18A2A" />
 						<stop offset="0.4" stop-color="#83C933" />
 						<stop offset="0.8" stop-color="#40B3D8" />
 					</linearGradient>
 					<linearGradient id="paint3_linear_138_1969" x1="293.423" y1="469.222" x2="643.578" y2="469.222"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="#F18A2A" />
 						<stop offset="0.4" stop-color="#83C933" />
 						<stop offset="0.8" stop-color="#40B3D8" />
 					</linearGradient>
 					<linearGradient id="paint4_linear_138_1969" x1="234.86" y1="469.222" x2="702.14" y2="469.222"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="#F18A2A" />
 						<stop offset="0.4" stop-color="#83C933" />
 						<stop offset="0.8" stop-color="#40B3D8" />
 					</linearGradient>
 					<linearGradient id="paint5_linear_138_1969" x1="176.298" y1="469.222" x2="760.703" y2="469.222"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="#F18A2A" />
 						<stop offset="0.4" stop-color="#83C933" />
 						<stop offset="0.8" stop-color="#40B3D8" />
 					</linearGradient>
 					<linearGradient id="paint6_linear_138_1969" x1="117.735" y1="469.222" x2="819.265" y2="469.222"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="#F18A2A" />
 						<stop offset="0.4" stop-color="#83C933" />
 						<stop offset="0.8" stop-color="#40B3D8" />
 					</linearGradient>
 					<linearGradient id="paint7_linear_138_1969" x1="59.1729" y1="469.222" x2="877.828" y2="469.222"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="#F18A2A" />
 						<stop offset="0.4" stop-color="#83C933" />
 						<stop offset="0.8" stop-color="#40B3D8" />
 					</linearGradient>
 					<linearGradient id="paint8_linear_138_1969" x1="0.610352" y1="469.222" x2="936.39" y2="469.222"
-						gradientUnits="userSpaceOnUse">
+									gradientUnits="userSpaceOnUse">
 						<stop stop-color="#F18A2A" />
 						<stop offset="0.4" stop-color="#83C933" />
 						<stop offset="0.8" stop-color="#40B3D8" />
@@ -407,7 +441,7 @@
 	<section class="features section-space" id="features">
 		<div class="container">
 			<div class="features-heading section-heading">
-				<h2 class="section-title"><span class="text-green">Все что нужно,</span> уже под рукой</h2>
+				<h2 class="section-title"><span class="text-green">Все, что вам нужно,</span> под рукой</h2>
 			</div>
 			<div class="features-wrapper">
 				<!-- Features Navigation -->
@@ -418,25 +452,89 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="features-tabs-item">
-								<h5 class="title">Мощный генератор кода Gii</h5>
+								<h5 class="title">Развивается сообществом</h5>
 								<p class="description">
-									Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс разработки.
+									Разрабатывается сообществом для сообщества.
 								</p>
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="features-tabs-item">
-								<h5 class="title">Готовый шаблон REST API</h5>
+								<h5 class="title">17 лет опыта</h5>
 								<p class="description">
-									Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс разработки.
+									Надежные решения и стабильная основа для ваших проектов.
 								</p>
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="features-tabs-item">
-								<h5 class="title">Продвинутая система аутентификации и авторизации</h5>
+								<h5 class="title">Шаблоны приложений</h5>
 								<p class="description">
-									Готовые решения для управления ролями и правами доступа.
+									Начните мгновенно с готовыми к использованию шаблонами для веб-приложений, REST API и консольных инструментов — с поддержкой Docker, маршрутизацией и настройкой тестирования.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Явный DI-контейнер</h5>
+								<p class="description">
+									Мощный и интуитивно понятный контейнер внедрения зависимостей с автоматическим связыванием и гибкими параметрами конфигурации.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Мощный DBAL</h5>
+								<p class="description">
+									Гибкая абстракция базы данных с построителем запросов, Active Record, миграциями и поддержкой PostgreSQL, MySQL, SQLite, MSSQL и Oracle.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Богатая экосистема пакетов Yii</h5>
+								<p class="description">
+									Обширная коллекция официальных пакетов для баз данных, кеширования, валидации, аутентификации и многого другого — готовых к использованию.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Режим воркеров</h5>
+								<p class="description">
+									Запускайте Yii3 с RoadRunner, Swoole или FrankenPHP для повышения производительности, исключая накладные расходы на инициализацию фреймворка.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Современный PHP</h5>
+								<p class="description">
+									Создан для PHP 8.2+ до 8.5 с использованием readonly-классов, продвижения конструкторов, атрибутов, строгой типизации и продвинутых возможностей языка.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Стандарты PSR</h5>
+								<p class="description">
+									Построен на PSR-7, PSR-15, PSR-3 и других интерфейсах, позволяя беспрепятственную интеграцию с любыми компонентами PHP-экосистемы.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Открытая PHP-экосистема</h5>
+								<p class="description">
+									Используйте любой пакет Composer, заменяйте основные реализации, интегрируйте сторонние библиотеки — никакой привязки к поставщику, только стандартный PHP.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="features-tabs-item">
+								<h5 class="title">Проверенное качество</h5>
+								<p class="description">
+									Каждый пакет достигает ~100% покрытия тестами PHPUnit, статическим анализом Psalm и мутационным тестированием Infection для бескомпромиссной надежности.
 								</p>
 							</div>
 						</div>
@@ -447,12 +545,104 @@
 				<!-- Features Content -->
 				<div class="features-content swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide" data-feature-title="Мощный генератор кода Gii"
-							data-feature-description="Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс разработки.">
+						<div class="swiper-slide" data-feature-title="Развивается сообществом"
+								 data-feature-description="Разрабатывается сообществом для сообщества.">
 							<div class="features-content-inner prose">
-								<h3>Генерация кода при помощи Gii</h3>
-								<p>Для достижения этой цели всё, что вам нужно, это просто ввести необходимую информацию в соответствии
-									с инструкциями, отображаемыми на веб-страницах Gii.</p>
+
+								<h3>Развивается сообществом</h3>
+								<p>
+									Yii3 всегда разрабатывался сообществом для сообщества. Нет ни одного человека или компании, которые владеют
+									фреймворком. Самые опытные участники формируют основные команды, которые внимательно слушают сообщество
+									и определяют курс разработки.
+								</p>
+
+								<p>Вклад сообщества очень приветствуется. Мы стараемся обрабатывать их как можно скорее, проводя проверки
+								   и предоставляя обратную связь, чтобы они соответствовали общему качеству фреймворка.</p>
+
+								<p>В конечном итоге активные участники присоединяются к основным командам.</p>
+
+								<p>Дружелюбное и отзывчивое сообщество — одна из наших целей.</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide" data-feature-title="17 лет опыта"
+								 data-feature-description="Надежные решения и стабильная основа для ваших проектов.">
+							<div class="features-content-inner prose">
+
+								<h3>17 лет опыта</h3>
+								<p>
+									Yii3 накапливает опыт с 2008 года, когда была выпущена первая версия Yii.
+								</p>
+
+								<ul>
+									<li>Лучшие идеи и принципы Yii 1.1 и Yii 2.0 воплощены в современных решениях.</li>
+									<li>Перспективная основа, которая будет работать десятилетиями.</li>
+									<li>Возможность быстро создавать прототипы, а также превращать их в стабильные поддерживаемые продукты.</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="swiper-slide" data-feature-title="Шаблоны приложений"
+							 data-feature-description="Начните мгновенно с готовыми к использованию шаблонами для веб-приложений, REST API и консольных инструментов — с поддержкой Docker, маршрутизацией и настройкой тестирования.">
+							<div class="features-content-inner prose">
+
+								<h3>Шаблоны приложений</h3>
+								<p>
+									Yii3 предоставляет проверенные временем шаблоны приложений для различных типов проектов: традиционные веб-приложения, REST API сервисы и консольные утилиты. Установите и запустите за считанные минуты без траты времени на настройку шаблонного кода.
+								</p>
+								<p>
+									Доступные шаблоны:
+								</p>
+								<ul>
+									<li>Веб-приложение - полнофункциональный шаблон с маршрутизацией, представлениями, ресурсами</li>
+									<li>API-приложение - оптимизировано для REST/JSON API с аутентификацией</li>
+									<li>Консольное приложение - CLI-инструменты и фоновые воркеры</li>
+								</ul>
+								<p>
+									Установите любой шаблон мгновенно:
+								</p>
+								<div class="code">
+									<div class="code-header">
+										<div class="code-header-title">Terminal</div>
+										<div class="code-header-dots">
+											<svg xmlns="http://www.w3.org/2000/svg" width="46" height="10" fill="none" viewBox="0 0 46 10">
+												<circle cx="5" cy="5" r="5" fill="#FC615D" />
+												<circle cx="23" cy="5" r="5" fill="#FEC041" />
+												<circle cx="41" cy="5" r="5" fill="#34C84A" />
+											</svg>
+										</div>
+									</div>
+									<div class="code-body">
+										<pre><code><div class="line"><span style="color: #45B26B;">composer create-project yiisoft/app my-project</span></div><div class="line"><span style="color: #79B8FF;">cd</span><span style="color: #45B26B;"> my-project</span></div><div class="line"><span style="color: #45B26B;">make up  </span><span style="color: #ccc;"># Docker-окружение запускается немедленно</span></div></code></pre>
+									</div>
+								</div>
+								<p>
+									Функции из коробки:
+								</p>
+								<ul>
+									<li>Docker-окружение с веб-сервером Caddy</li>
+									<li>Отдельные точки входа для веб и консоли</li>
+									<li>Организованная структура</li>
+									<li>Настроенная маршрутизация, middleware, DI-контейнер</li>
+									<li>Управление ресурсами и инструменты сборки</li>
+									<li>Конфигурация на основе окружения (dev/test/prod)</li>
+									<li>Тестовые наборы PHPUnit и Codeception</li>
+								</ul>
+								<p>Шаблоны следуют современным лучшим практикам и методологии 12-factor. Все ваше для свободной настройки.</p>
+							</div>
+						</div>
+						<div class="swiper-slide" data-feature-title="Явный DI-контейнер"
+							 data-feature-description="Мощный и интуитивно понятный контейнер внедрения зависимостей с автоматическим связыванием и гибкими параметрами конфигурации.">
+							<div class="features-content-inner prose">
+
+								<h3>Явный DI-контейнер</h3>
+								<p>
+									Контейнер внедрения зависимостей Yii3 устраняет шаблонный код, сохраняя при этом ясность и типобезопасность.
+									Контейнер автоматически разрешает зависимости через конструктор и инъекцию методов.
+								</p>
+								<p>
+									Конфигурация проста и поддерживает несколько стилей объявления:
+								</p>
 								<div class="code">
 									<div class="code-header">
 										<div class="code-header-title">config/web.php</div>
@@ -465,22 +655,26 @@
 										</div>
 									</div>
 									<div class="code-body">
-										<pre><code><div class="line"><span style="color: #F18A2A;">namespace</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">App\Yii3\Resources</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostDetailPage</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">PostResource</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">extends</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">ModelResource</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $model </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Post</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $title </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #9ECBFF;">'Posts'</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">//...</span></div></code></pre>
+										<pre><code><div class="line"><span style="color: #F18A2A;">return</span><span style="color: #45B26B;"> [</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">// Сопоставление интерфейса с классом</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #40B3D8;">EngineInterface</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">EngineMarkOne</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">,</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">// Детальная конфигурация</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #40B3D8;">MyServiceInterface</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> [</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #9ECBFF;">'class'</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">MyService</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">,</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #9ECBFF;">'__construct()'</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> [</span><span style="color: #F08D49;">42</span><span style="color: #45B26B;">],</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #9ECBFF;">'setDiscount()'</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> [</span><span style="color: #F08D49;">10</span><span style="color: #45B26B;">],</span></div><div class="line"><span style="color: #45B26B;">    ],</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">// Фабричные замыкания</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #9ECBFF;">'api'</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">static</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">fn</span><span style="color: #45B26B;">(</span><span style="color: #40B3D8;">ApiConfig</span><span style="color: #45B26B;"> $config) </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">new</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">ApiClient</span><span style="color: #45B26B;">($config),</span></div><div class="line"><span style="color: #45B26B;">];</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #ccc;">// Зависимости автоматически внедряются на основе подсказок типов</span></div><div class="line"><span style="color: #F18A2A;">final</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">readonly</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">MyController</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">public</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">function</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">__construct</span><span style="color: #45B26B;">(</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #F18A2A;">private</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">CacheInterface</span><span style="color: #45B26B;"> $cache</span></div><div class="line"><span style="color: #45B26B;">    ) {}</span></div><div class="line"><span style="color: #45B26B;">}</span></div></code></pre>
 									</div>
 								</div>
-								<p>После этого используйте генератор кода для создания моделей, CRUD и многого другого.</p>
-								<p>Затем настройте сгенерированный код в соответствии с вашими потребностями.</p>
+								<p>Никаких анти-паттернов service locator, никаких скрытых зависимостей — только чистый, тестируемый код с явными контрактами.</p>
 							</div>
 						</div>
-						<div class="swiper-slide" data-feature-title="Готовый шаблон REST API"
-							data-feature-description="Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс разработки.">
+						<div class="swiper-slide" data-feature-title="Мощный DBAL"
+							 data-feature-description="Гибкая абстракция базы данных с построителем запросов, Active Record, миграциями и поддержкой PostgreSQL, MySQL, SQLite, MSSQL и Oracle.">
 							<div class="features-content-inner prose">
-								<h3>Готовый шаблон REST API</h3>
-								<p>Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс
-									разработки.</p>
+
+								<h3>Мощный DBAL</h3>
+								<p>
+									Yii3 предоставляет надежный слой базы данных с гибким построителем запросов, реализацией паттерна Active Record и комплексным управлением схемой. Работайте напрямую с запросами для производительности или используйте Active Record для удобства.
+								</p>
+								<p>
+									Иммутабельный построитель запросов предлагает выразительные, типобезопасные операции с базой данных:
+								</p>
 								<div class="code">
 									<div class="code-header">
-										<div class="code-header-title">App/Layouts/AppLayout.php</div>
+										<div class="code-header-title">Query Example</div>
 										<div class="code-header-dots">
 											<svg xmlns="http://www.w3.org/2000/svg" width="46" height="10" fill="none" viewBox="0 0 46 10">
 												<circle cx="5" cy="5" r="5" fill="#FC615D" />
@@ -490,18 +684,176 @@
 										</div>
 									</div>
 									<div class="code-body">
-										<pre><code><div class="line"><span style="color: #F18A2A;">namespace</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">App\Yii3\Resources</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">App\Yii3\Pages\Post\PostDetailPage</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">PostResource</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">extends</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">ModelResource</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $model </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Post</span><span style="color: #F18A2A;">::class</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">protected</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">string</span><span style="color: #45B26B;"> $title </span><span style="color: #F18A2A;">=</span><span style="color: #45B26B;"> </span><span style="color: #9ECBFF;">'Posts'</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #ccc;">//...</span></div></code></pre>
+										<pre><code><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Yiisoft\Db\Query\Query</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">$posts = (</span><span style="color: #F18A2A;">new</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Query</span><span style="color: #45B26B;">($connection))</span></div><div class="line"><span style="color: #45B26B;">    -&gt;</span><span style="color: #79B8FF;">select</span><span style="color: #45B26B;">([</span><span style="color: #9ECBFF;">'id'</span><span style="color: #45B26B;">, </span><span style="color: #9ECBFF;">'title'</span><span style="color: #45B26B;">, </span><span style="color: #9ECBFF;">'created_at'</span><span style="color: #45B26B;">])</span></div><div class="line"><span style="color: #45B26B;">    -&gt;</span><span style="color: #79B8FF;">from</span><span style="color: #45B26B;">(</span><span style="color: #9ECBFF;">'&#123;&#123;%posts&#125;&#125;'</span><span style="color: #45B26B;">)</span></div><div class="line"><span style="color: #45B26B;">    -&gt;</span><span style="color: #79B8FF;">where</span><span style="color: #45B26B;">([</span><span style="color: #9ECBFF;">'status'</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> </span><span style="color: #9ECBFF;">'published'</span><span style="color: #45B26B;">])</span></div><div class="line"><span style="color: #45B26B;">    -&gt;</span><span style="color: #79B8FF;">andWhere</span><span style="color: #45B26B;">([</span><span style="color: #9ECBFF;">'&gt;'</span><span style="color: #45B26B;">, </span><span style="color: #9ECBFF;">'views'</span><span style="color: #45B26B;">, </span><span style="color: #F08D49;">1000</span><span style="color: #45B26B;">])</span></div><div class="line"><span style="color: #45B26B;">    -&gt;</span><span style="color: #79B8FF;">orderBy</span><span style="color: #45B26B;">([</span><span style="color: #9ECBFF;">'created_at'</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> </span><span style="color: #79B8FF;">SORT_DESC</span><span style="color: #45B26B;">])</span></div><div class="line"><span style="color: #45B26B;">    -&gt;</span><span style="color: #79B8FF;">limit</span><span style="color: #45B26B;">(</span><span style="color: #F08D49;">10</span><span style="color: #45B26B;">)</span></div><div class="line"><span style="color: #45B26B;">    -&gt;</span><span style="color: #79B8FF;">all</span><span style="color: #45B26B;">();</span></div></code></pre>
 									</div>
 								</div>
-								<p>После этого используйте генератор кода для создания моделей, CRUD и многого другого.</p>
-								<p>Затем настройте сгенерированный код в соответствии с вашими потребностями.</p>
+								<p>
+									Команды предоставляют чистые API для манипуляции данными, включая upsert, пакетные операции и транзакции. Active Record обеспечивает возможности ORM со связями, жадной загрузкой и автоматической валидацией. Миграции обеспечивают версионную эволюцию схемы.
+								</p>
+								<p>Поддержка нескольких движков баз данных из коробки. Опционально интегрируйте Cycle ORM или Doctrine для продвинутых сценариев использования.</p>
 							</div>
 						</div>
-						<div class="swiper-slide" data-feature-title="Продвинутая система аутентификации и авторизации"
-							data-feature-description="Готовые решения для управления ролями и правами доступа.">
+						<div class="swiper-slide" data-feature-title="Богатая экосистема пакетов Yii"
+							 data-feature-description="Обширная коллекция официальных пакетов для баз данных, кеширования, валидации, аутентификации и многого другого — готовых к использованию.">
 							<div class="features-content-inner prose">
-								<h3>Продвинутая система аутентификации и авторизации</h3>
-								<p>Автоматизирует создание моделей, контроллеров и представлений, значительно ускоряя процесс.</p>
+
+								<h3>Богатая экосистема пакетов Yii</h3>
+								<p>
+									Yii3 предоставляет всеобъемлющую экосистему готовых к использованию пакетов, охватывающую практически все потребности веб-приложений. Все пакеты следуют одинаковым стандартам качества с полным покрытием тестами и соответствием PSR.
+								</p>
+								<ul>
+									<li><b>База данных и персистентность</b> — поддержка нескольких баз данных с построителем запросов и ORM, миграции схем, пулы соединений и управление транзакциями.</li>
+									<li><b>Решения для кеширования</b> — гибкий слой кеширования с адаптерами для популярных бэкендов, включая хранилища в памяти, распределенные кеши и файловое хранилище.</li>
+									<li><b>Безопасность и контроль доступа</b> — полные системы аутентификации и авторизации с управлением доступом на основе ролей, управлением разрешениями и безопасной обработкой паролей.</li>
+									<li><b>Валидация</b> — мощный фреймворк валидации с обширными встроенными правилами, пользовательскими валидаторами, условной валидацией и форматированием сообщений об ошибках для проверки пользовательского ввода.</li>
+									<li><b>Гидратация</b> — гидратация объектов для преобразования массивов в типизированные объекты и обратно, обеспечивая типобезопасность и бесшовное отображение данных во всем приложении.</li>
+									<li><b>Рендеринг представлений</b> — гибкая поддержка шаблонизаторов с несколькими бэкендами рендеринга, макетами, частичными представлениями, системой виджетов и управлением ресурсами для организованного фронтенд-кода.</li>
+									<li><b>Обработка данных</b> — форматтеры данных, пагинация, сортировка и абстракции провайдеров данных для согласованной обработки различных источников данных.</li>
+									<li><b>Утилиты</b> — инструменты для массивов, строк, файлов, JSON, генерации HTML и сетевых операций для упрощения общих задач программирования.</li>
+								</ul>
+								<p>Каждый пакет независимо версионируется, тщательно документирован и доступен на Packagist. Устанавливайте только то, что нужно — никакого раздувания, только решения.</p>
+							</div>
+						</div>
+						<div class="swiper-slide" data-feature-title="Режим воркеров"
+							 data-feature-description="Запускайте Yii3 с RoadRunner, Swoole или FrankenPHP для повышения производительности, исключая накладные расходы на инициализацию фреймворка.">
+							<div class="features-content-inner prose">
+
+								<h3>Режим воркеров</h3>
+								<p>
+									Традиционный PHP переинициализирует фреймворк для каждого запроса, потребляя много ресурсов обработки. Yii3 поддерживает режим работы с циклом событий, где воркеры обрабатывают множественные запросы без переинициализации, существенно улучшая производительность.
+								</p>
+								<p>
+									Фреймворк автоматически управляет состоянием, гарантируя, что каждый запрос обрабатывается изолированно, при этом разделяя инициализированный контекст. Воркеры обрабатывают запросы независимо, обеспечивая значительный прирост производительности без ущерба для качества или безопасности кода.
+								</p>
+								<p>Совместим с RoadRunner, Swoole и FrankenPHP из коробки.</p>
+							</div>
+						</div>
+						<div class="swiper-slide" data-feature-title="Современный PHP"
+							 data-feature-description="Создан для PHP 8.2+ до 8.5 с использованием readonly-классов, продвижения конструкторов, атрибутов, строгой типизации и продвинутых возможностей языка.">
+							<div class="features-content-inner prose">
+
+								<h3>Современный PHP</h3>
+								<p>
+									Yii3 полностью использует возможности современного PHP, поддерживая PHP 8.2 до 8.5 и широко применяя современные возможности языка для более чистого, безопасного и поддерживаемого кода.
+								</p>
+								<p>
+									Readonly-классы с продвижением свойств конструктора устраняют шаблонный код:
+								</p>
+								<div class="code">
+									<div class="code-header">
+										<div class="code-header-title">UserService.php</div>
+										<div class="code-header-dots">
+											<svg xmlns="http://www.w3.org/2000/svg" width="46" height="10" fill="none" viewBox="0 0 46 10">
+												<circle cx="5" cy="5" r="5" fill="#FC615D" />
+												<circle cx="23" cy="5" r="5" fill="#FEC041" />
+												<circle cx="41" cy="5" r="5" fill="#34C84A" />
+											</svg>
+										</div>
+									</div>
+									<div class="code-body">
+										<pre><code><div class="line"><span style="color: #F18A2A;">final</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">readonly</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">UserService</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">public</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">function</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">__construct</span><span style="color: #45B26B;">(</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #F18A2A;">private</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">UserRepository</span><span style="color: #45B26B;"> $users,</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #F18A2A;">private</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">LoggerInterface</span><span style="color: #45B26B;"> $logger,</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #F18A2A;">private</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">CacheInterface</span><span style="color: #45B26B;"> $cache,</span></div><div class="line"><span style="color: #45B26B;">    ) {}</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">public</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">function</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">findByEmail</span><span style="color: #45B26B;">(</span><span style="color: #40B3D8;">string</span><span style="color: #45B26B;"> $email): ?</span><span style="color: #40B3D8;">User</span></div><div class="line"><span style="color: #45B26B;">    {</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #F18A2A;">return</span><span style="color: #45B26B;"> $</span><span style="color: #F18A2A;">this</span><span style="color: #45B26B;">-&gt;cache-&gt;</span><span style="color: #79B8FF;">getOrSet</span><span style="color: #45B26B;">(</span></div><div class="line"><span style="color: #45B26B;">            </span><span style="color: #9ECBFF;">"user:$email"</span><span style="color: #45B26B;">,</span></div><div class="line"><span style="color: #45B26B;">            </span><span style="color: #F18A2A;">fn</span><span style="color: #45B26B;">() </span><span style="color: #F18A2A;">=&gt;</span><span style="color: #45B26B;"> $</span><span style="color: #F18A2A;">this</span><span style="color: #45B26B;">-&gt;users-&gt;</span><span style="color: #79B8FF;">findByEmail</span><span style="color: #45B26B;">($email)</span></div><div class="line"><span style="color: #45B26B;">        );</span></div><div class="line"><span style="color: #45B26B;">    }</span></div><div class="line"><span style="color: #45B26B;">}</span></div></code></pre>
+									</div>
+								</div>
+								<p>
+									Строгие объявления типов во всем фреймворке отлавливают ошибки во время компиляции. Атрибуты обеспечивают функциональность на основе метаданных. Генераторы оптимизируют использование памяти для больших наборов данных. Именованные аргументы улучшают читаемость конфигурации.
+								</p>
+								<p>Кодовая база демонстрирует современные лучшие практики PHP, служа справочником для написания современных типобезопасных приложений.</p>
+							</div>
+						</div>
+						<div class="swiper-slide" data-feature-title="Стандарты PSR"
+							 data-feature-description="Построен на PSR-7, PSR-15, PSR-3 и других интерфейсах, позволяя беспрепятственную интеграцию с любыми компонентами PHP-экосистемы.">
+							<div class="features-content-inner prose">
+
+								<h3>Стандарты PSR</h3>
+								<p>
+									Yii3 активно использует PSR-интерфейсы, позволяя вам повторно использовать то, что создало PHP-сообщество, и даже заменять основные реализации при необходимости. Фреймворк обеспечивает гибкость без привязки к поставщику.
+								</p>
+								<p>
+									Например, обработка HTTP использует запросы/ответы PSR-7 и middleware PSR-15:
+								</p>
+								<div class="code">
+									<div class="code-header">
+										<div class="code-header-title">PostAction.php</div>
+										<div class="code-header-dots">
+											<svg xmlns="http://www.w3.org/2000/svg" width="46" height="10" fill="none" viewBox="0 0 46 10">
+												<circle cx="5" cy="5" r="5" fill="#FC615D" />
+												<circle cx="23" cy="5" r="5" fill="#FEC041" />
+												<circle cx="41" cy="5" r="5" fill="#34C84A" />
+											</svg>
+										</div>
+									</div>
+									<div class="code-body">
+										<pre><code><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Psr\Http\Message\ResponseInterface</span><span style="color: #45B26B;">;</span></div><div class="line"><span style="color: #F18A2A;">use</span><span style="color: #45B26B;"> </span><span style="color: #40B3D8;">Psr\Http\Message\ServerRequestInterface</span><span style="color: #45B26B;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #F18A2A;">final</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">readonly</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">class</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">PostAction</span></div><div class="line"><span style="color: #45B26B;">{</span></div><div class="line"><span style="color: #45B26B;">    </span><span style="color: #F18A2A;">public</span><span style="color: #45B26B;"> </span><span style="color: #F18A2A;">function</span><span style="color: #45B26B;"> </span><span style="color: #B392F0;">view</span><span style="color: #45B26B;">(</span><span style="color: #40B3D8;">ServerRequestInterface</span><span style="color: #45B26B;"> $request): </span><span style="color: #40B3D8;">ResponseInterface</span></div><div class="line"><span style="color: #45B26B;">    {</span></div><div class="line"><span style="color: #45B26B;">        $response = $</span><span style="color: #F18A2A;">this</span><span style="color: #45B26B;">-&gt;responseFactory-&gt;</span><span style="color: #79B8FF;">createResponse</span><span style="color: #45B26B;">();</span></div><div class="line"><span style="color: #45B26B;">        $response-&gt;</span><span style="color: #79B8FF;">getBody</span><span style="color: #45B26B;">()-&gt;</span><span style="color: #79B8FF;">write</span><span style="color: #45B26B;">(</span><span style="color: #9ECBFF;">'Hello!'</span><span style="color: #45B26B;">);</span></div><div class="line"><span style="color: #45B26B;">        </span><span style="color: #F18A2A;">return</span><span style="color: #45B26B;"> $response;</span></div><div class="line"><span style="color: #45B26B;">    }</span></div><div class="line"><span style="color: #45B26B;">}</span></div></code></pre>
+									</div>
+								</div>
+								<p>
+									Логирование следует PSR-3, кеширование реализует PSR-16, а внедрение зависимостей использует PSR-11. Это означает, что вы можете использовать Monolog для логирования, любой PSR-16 адаптер кеша или интегрировать стороннее PSR-15 middleware из экосистемы без трений.
+								</p>
+								<p>Архитектура, ориентированная на стандарты, гарантирует, что ваш код остается портируемым и перспективным, сохраняя при этом полный доступ к современным PHP-инструментам.</p>
+							</div>
+						</div>
+						<div class="swiper-slide" data-feature-title="Открытая PHP-экосистема"
+							 data-feature-description="Используйте любой пакет Composer, заменяйте основные реализации, интегрируйте сторонние библиотеки — никакой привязки к поставщику, только стандартный PHP.">
+							<div class="features-content-inner prose">
+
+								<h3>Открытая PHP-экосистема</h3>
+								<p>
+									Yii3 охватывает всю PHP-экосистему вместо изобретения велосипеда. Построенный на стандартах PSR и Composer, фреймворк беспрепятственно интегрируется с любой PHP-библиотекой без навязывания проприетарных решений.
+								</p>
+								<p>
+									Используйте любой пакет Composer:
+								</p>
+								<div class="code">
+									<div class="code-header">
+										<div class="code-header-title">Terminal</div>
+										<div class="code-header-dots">
+											<svg xmlns="http://www.w3.org/2000/svg" width="46" height="10" fill="none" viewBox="0 0 46 10">
+												<circle cx="5" cy="5" r="5" fill="#FC615D" />
+												<circle cx="23" cy="5" r="5" fill="#FEC041" />
+												<circle cx="41" cy="5" r="5" fill="#34C84A" />
+											</svg>
+										</div>
+									</div>
+									<div class="code-body">
+										<pre><code><div class="line"><span style="color: #45B26B;">composer </span><span style="color: #79B8FF;">require</span><span style="color: #45B26B;"> monolog/monolog</span></div><div class="line"><span style="color: #45B26B;">composer </span><span style="color: #79B8FF;">require</span><span style="color: #45B26B;"> league/flysystem</span></div><div class="line"><span style="color: #45B26B;">composer </span><span style="color: #79B8FF;">require</span><span style="color: #45B26B;"> symfony/mailer</span></div></code></pre>
+									</div>
+								</div>
+								<p>
+									Все пакеты работают немедленно через PSR-автозагрузку и внедрение зависимостей. Нужен Monolog для логирования? Doctrine для ORM? Компоненты Symfony? Просто установите и используйте их.
+								</p>
+								<p>
+									
+<b>Заменяйте основные реализации:</b>
+									благодаря PSR-интерфейсам меняйте встроенные компоненты на альтернативы. Используйте Twig вместо стандартного шаблонизатора, Redis-кеш вместо файлового кеша или любую реализацию логгера PSR-3.
+								</p>
+								<p>
+									
+<b>Создавайте и делитесь пакетами:</b>
+									создавайте переиспользуемые компоненты как пакеты Composer и публикуйте на Packagist. Фреймворк не запирает вас в проприетарных форматах — ваш код остается портируемым между проектами и фреймворками.
+								</p>
+								<p>Никакой привязки к поставщику. Никаких проприетарных API. Только современные PHP-стандарты, позволяющие использовать инновации всей экосистемы.</p>
+							</div>
+						</div>
+						<div class="swiper-slide" data-feature-title="Проверенное качество"
+							 data-feature-description="Каждый пакет достигает ~100% покрытия тестами PHPUnit, статическим анализом Psalm и мутационным тестированием Infection для бескомпромиссной надежности.">
+							<div class="features-content-inner prose">
+
+								<h3>Проверенное качество</h3>
+								<p>
+									Yii3 поддерживает исключительные стандарты качества кода во всех пакетах. Каждая строка проходит строгую проверку через множество уровней автоматизированного тестирования и анализа.
+								</p>
+								<p>
+									Статический анализ проверяет каждую строку на корректность типов и потенциальные ошибки, предотвращая сбои во время выполнения из-за неправильных типов данных или скрытых багов до того, как они попадут в продакшн.
+								</p>
+								<p>
+									Комплексные юнит-тесты охватывают все компоненты системы, гарантируя, что обновления и модификации не нарушат существующую функциональность. Изменения проверяются автоматически перед релизом.
+								</p>
+								<p>
+									Мутационное тестирование проверяет, что тесты отлавливают даже тонкие изменения поведения кода, защищая от неочевидных багов.
+								</p>
+								<p>
+									Эта трехуровневая гарантия качества означает, что ваше приложение работает на проверенной в боях основе, где потенциальные проблемы устраняются во время разработки, а не обнаруживаются в продакшне.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -509,10 +861,10 @@
 
 				<!-- Illustration -->
 				<svg class="features-squares" width="949" height="564" viewBox="0 0 949 564" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
+					 xmlns="http://www.w3.org/2000/svg">
 					<g opacity="0.5" clip-path="url(#clip0_138_1901)">
 						<mask id="mask0_138_1901" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="949"
-							height="744">
+							  height="744">
 							<path
 								d="M924.286 0.909912H24.7135C11.0646 0.909912 0 9.57379 0 20.2612V724.649C0 735.336 11.0646 744 24.7135 744H924.286C937.935 744 949 735.336 949 724.649V20.2612C949 9.57379 937.935 0.909912 924.286 0.909912Z"
 								fill="url(#paint0_radial_138_1901)" />
@@ -546,54 +898,54 @@
 					</g>
 					<defs>
 						<radialGradient id="paint0_radial_138_1901" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-							gradientTransform="translate(474.5 0.909824) rotate(90) scale(743.09 495.317)">
+										gradientTransform="translate(474.5 0.909824) rotate(90) scale(743.09 495.317)">
 							<stop />
 							<stop offset="0.953125" stop-opacity="0" />
 						</radialGradient>
 						<linearGradient id="paint1_linear_138_1901" x1="415.806" y1="476.028" x2="533.195" y2="476.028"
-							gradientUnits="userSpaceOnUse">
+										gradientUnits="userSpaceOnUse">
 							<stop stop-color="#F18A2A" />
 							<stop offset="0.4" stop-color="#83C933" />
 							<stop offset="0.8" stop-color="#40B3D8" />
 						</linearGradient>
 						<linearGradient id="paint2_linear_138_1901" x1="356.493" y1="476.028" x2="592.507" y2="476.028"
-							gradientUnits="userSpaceOnUse">
+										gradientUnits="userSpaceOnUse">
 							<stop stop-color="#F18A2A" />
 							<stop offset="0.4" stop-color="#83C933" />
 							<stop offset="0.8" stop-color="#40B3D8" />
 						</linearGradient>
 						<linearGradient id="paint3_linear_138_1901" x1="297.181" y1="476.028" x2="651.82" y2="476.028"
-							gradientUnits="userSpaceOnUse">
+										gradientUnits="userSpaceOnUse">
 							<stop stop-color="#F18A2A" />
 							<stop offset="0.4" stop-color="#83C933" />
 							<stop offset="0.8" stop-color="#40B3D8" />
 						</linearGradient>
 						<linearGradient id="paint4_linear_138_1901" x1="237.868" y1="476.027" x2="711.132" y2="476.027"
-							gradientUnits="userSpaceOnUse">
+										gradientUnits="userSpaceOnUse">
 							<stop stop-color="#F18A2A" />
 							<stop offset="0.4" stop-color="#83C933" />
 							<stop offset="0.8" stop-color="#40B3D8" />
 						</linearGradient>
 						<linearGradient id="paint5_linear_138_1901" x1="178.556" y1="476.028" x2="770.445" y2="476.028"
-							gradientUnits="userSpaceOnUse">
+										gradientUnits="userSpaceOnUse">
 							<stop stop-color="#F18A2A" />
 							<stop offset="0.4" stop-color="#83C933" />
 							<stop offset="0.8" stop-color="#40B3D8" />
 						</linearGradient>
 						<linearGradient id="paint6_linear_138_1901" x1="119.243" y1="476.027" x2="829.758" y2="476.027"
-							gradientUnits="userSpaceOnUse">
+										gradientUnits="userSpaceOnUse">
 							<stop stop-color="#F18A2A" />
 							<stop offset="0.4" stop-color="#83C933" />
 							<stop offset="0.8" stop-color="#40B3D8" />
 						</linearGradient>
 						<linearGradient id="paint7_linear_138_1901" x1="59.9307" y1="476.027" x2="889.07" y2="476.027"
-							gradientUnits="userSpaceOnUse">
+										gradientUnits="userSpaceOnUse">
 							<stop stop-color="#F18A2A" />
 							<stop offset="0.4" stop-color="#83C933" />
 							<stop offset="0.8" stop-color="#40B3D8" />
 						</linearGradient>
 						<linearGradient id="paint8_linear_138_1901" x1="0.618164" y1="476.027" x2="948.383" y2="476.027"
-							gradientUnits="userSpaceOnUse">
+										gradientUnits="userSpaceOnUse">
 							<stop stop-color="#F18A2A" />
 							<stop offset="0.4" stop-color="#83C933" />
 							<stop offset="0.8" stop-color="#40B3D8" />
@@ -615,16 +967,16 @@
 					<h2 class="section-title"><span class="text-orange">PHP 8</span> & APIs</h2>
 					<div class="section-descr">
 						<p>
-							Полностью документирован, IDE friendly.<br /> Готов к использованию совместно с <strong>React,
-								Vue.js</strong> или <strong>Angular.</strong>
+							Полностью документирован, удобен для IDE.<br /> Готов к использованию с <strong>React,
+							Vue.js</strong> или <strong>Angular.</strong>
 						</p>
 					</div>
 				</div>
 				<div x-data x-show="$store.darkMode.dark">
-					<img src="./images/technologies-dark.svg" class="technologies-header-picture" alt="Yii3 APIs" />
+					<img src="./images/technologies-dark.svg" class="technologies-header-picture" alt="Yii3 API" />
 				</div>
 				<div x-data x-show="!$store.darkMode.dark">
-					<img src="./images/technologies-light.svg" class="technologies-header-picture" alt="Yii3 APIs" />
+					<img src="./images/technologies-light.svg" class="technologies-header-picture" alt="Yii3 API" />
 				</div>
 			</div>
 			<div class="technologies-list">
@@ -636,8 +988,8 @@
 						<h3 class="heading-title">Psalm</h3>
 						<div class="heading-descr">
 							<p>
-								Каждая строчка кода проверена на типы данных и потенциальные ошибки. Это значит, что в вашем проекте не
-								будет неожиданных сбоев из-за неправильных данных или скрытых ошибок в коде.
+								Каждая строка кода проверяется на типы данных и потенциальные ошибки. Это означает, что ваш проект не будет иметь
+								неожиданных сбоев из-за неправильных данных или скрытых багов в коде.
 							</p>
 						</div>
 					</div>
@@ -650,9 +1002,9 @@
 						<h3 class="heading-title">PHPUnit</h3>
 						<div class="heading-descr">
 							<p>
-								Все компоненты системы охвачены UNIT-тестами. Вы можете быть уверены, что при обновлениях или изменениях
-								кода система продолжит работать как часы - любая проблема будет поймана до того, как попадёт к
-								пользователям.
+								Все компоненты системы покрыты юнит-тестами. Вы можете быть уверены, что при обновлениях или изменениях кода
+								система продолжит работать как часы - любая проблема будет обнаружена до того, как она достигнет
+								пользователей.
 							</p>
 						</div>
 					</div>
@@ -665,7 +1017,7 @@
 						<h3 class="heading-title">Infection MSI</h3>
 						<div class="heading-descr">
 							<p>
-								Тесты успешно ловят даже малейшие отклонения в работе кода. Это гарантирует, что ваше приложение
+								Тесты успешно отлавливают даже малейшие отклонения в поведении кода. Это гарантирует, что ваше приложение
 								защищено от неочевидных багов и всегда работает именно так, как задумано.
 							</p>
 						</div>
@@ -676,185 +1028,36 @@
 	</section>
 
 	<!-- Section: Testimonials -->
-	<section class="testimonials section-space" id="testimonials">
+	<section class="testimonials" id="testimonials">
 		<div class="container">
-			<div class="testimonials-heading section-heading">
-				<h2 class="section-title"><span class="text-blue">Признанный многими</span> фреймворк</h2>
-				<div class="section-descr">
-					<p>Не доверяете нам на слово? Убедитесь сами, что говорят опытные разработчики.</p>
-				</div>
-			</div>
-			<div class="testimonials-grid">
-				<div class="testimonials-grid-col">
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>I'm loving what Yii enables. We've found building SolidStart that it is less a metaframework but a
-								system of symbiotic Yii plugins. While built with SolidJS in mind, they should scale from our simplest
-								template to opinionated starter. We're building an ecosystem on Yii.</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/ryan.jpg" alt="Ryan Carniato">
-							</div>
-							<div class="author-main">
-								<div class="name">Ryan Carniato</div>
-								<div class="social">@RyanCarniato</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>Yii is basically the united nations of PHP at this point. I'll be there as a representative of
-								Sveltelandia 🔥</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/rich.jpg" alt="Rich Harris">
-							</div>
-							<div class="author-main">
-								<div class="name">Rich Harris</div>
-								<div class="social">@Rich_Harris</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>Each and every time I use Yii, I feel a true sense of pure and unbridled joy.</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/david.jpg" alt="David East">
-							</div>
-							<div class="author-main">
-								<div class="name">David East</div>
-								<div class="social">@_davideast</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="testimonials-grid-col">
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>It’s also a great platform to build a framework on since it provides a pluggable dev environment.
-								Community is amazing too 🤠</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/ryan.jpg" alt="Ryan Carniato">
-							</div>
-							<div class="author-main">
-								<div class="name">Mark Dalgleish</div>
-								<div class="social">@markdalgleish</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>Yii’s blend of high performance and focused developer experience is a game changer. Its SSR and SSG
-								flexibility, coupled with a community that’s as vibrant as the React.js ecosystem, makes it a great
-								choice for modern web projects.</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/rich.jpg" alt="Rich Harris">
-							</div>
-							<div class="author-main">
-								<div class="name">David Cramer</div>
-								<div class="social">@zeeg</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>Every time I suspect I've hit the bounds of what Yii can do, I end up being wrong.</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/david.jpg" alt="David East">
-							</div>
-							<div class="author-main">
-								<div class="name">Jason Miller</div>
-								<div class="social">@_developit</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="testimonials-grid-col">
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>I am so excited to see so many great frameworks teaming up on top of Yii. So many will benefit. ❤️ to
-								the Yii team.</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/ryan.jpg" alt="Ryan Carniato">
-							</div>
-							<div class="author-main">
-								<div class="name">Dion Almaer</div>
-								<div class="social">@dalmaer</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>Wow, wow, wow, wow, wow, wow, Yii is.....<br>
-								Yii is.... Wow 🤤 🤯 🙏</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/rich.jpg" alt="Rich Harris">
-							</div>
-							<div class="author-main">
-								<div class="name">Christoph Nakazawa</div>
-								<div class="social">@cpojer</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonials-item">
-						<div class="speech">
-							<p>Yii is a fantastic choice for teams building a production-grade product on the web. It aims to bake in
-								performance best-practices while maintaining excellent Vue.js DX.</p>
-						</div>
-						<div class="author">
-							<div class="author-photo img-cover">
-								<img src="./images/people/david.jpg" alt="David East">
-							</div>
-							<div class="author-main">
-								<div class="name">Christoph Nakazawa</div>
-								<div class="social">@cpojer</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="testimonials-community">
 				<div class="testimonials-community-heading">
-					Присоединяйтесь к&nbsp;растущему сообществу&nbsp;
+					Присоединяйтесь кJoin the&nbsp;growing community&nbsp;nbsp;растущему сообществуJoin the&nbsp;growing community&nbsp;nbsp;
 					<div class="yii-logo">
 						<svg xmlns="http://www.w3.org/2000/svg" width="39" height="48" fill="none" viewBox="0 0 39 48">
 							<path fill="#40B3D8"
-								d="M28.607 30.512c-.315-4.276-1.657-7.047-2.31-8.618-.654-1.57-1.658-3.04-1.658-3.038-.002.007-.904 5.003-2.527 8.618-.27.604-.63 1.358-.993 1.965-1.12 2.032-2.745 3.976-3.714 5.946-.96 1.953-1.138 3.887-1.049 6.086.09 2.21.587 4.38 1.064 6.529a14.41 14.41 0 0 0 4.72-1.954c3.564-2.296 5.718-5.97 6.33-9.926 0 0 .03-.161.043-.357.276-3.059.185-4.023.094-5.251Z" />
+								  d="M28.607 30.512c-.315-4.276-1.657-7.047-2.31-8.618-.654-1.57-1.658-3.04-1.658-3.038-.002.007-.904 5.003-2.527 8.618-.27.604-.63 1.358-.993 1.965-1.12 2.032-2.745 3.976-3.714 5.946-.96 1.953-1.138 3.887-1.049 6.086.09 2.21.587 4.38 1.064 6.529a14.41 14.41 0 0 0 4.72-1.954c3.564-2.296 5.718-5.97 6.33-9.926 0 0 .03-.161.043-.357.276-3.059.185-4.023.094-5.251Z" />
 							<path fill="#83C933"
-								d="M28.607 30.512c-.315-4.275-1.657-7.047-2.31-8.617-.653-1.571-1.658-3.041-1.658-3.039v.001-.001l-.24-.366C19.142 10.907 9.061 7.12.544 10.63c-.41 5.315 1.988 14.46 10.736 17.01 3.536 1.119 6.368.83 9.84 1.799h-.001s3.528 1.264 5.58 3.158c.923.853 1.848 1.974 1.801 3.308.293-3.175.2-4.146.107-5.393Z" />
+								  d="M28.607 30.512c-.315-4.275-1.657-7.047-2.31-8.617-.653-1.571-1.658-3.041-1.658-3.039v.001-.001l-.24-.366C19.142 10.907 9.061 7.12.544 10.63c-.41 5.315 1.988 14.46 10.736 17.01 3.536 1.119 6.368.83 9.84 1.799h-.001s3.528 1.264 5.58 3.158c.923.853 1.848 1.974 1.801 3.308.293-3.175.2-4.146.107-5.393Z" />
 							<path fill="#F18A2A" fill-rule="evenodd"
-								d="M24.787 14.406c-1.243-3.737-.716-6.24 1.558-9.725C27.43 3.018 29.302 1.089 30.943 0c6.622 4.264 9.07 12.206 6.635 19.582-1.772 5.367-3.435 7.618-7.64 13.14.49-5.914-1.535-10.014-3.523-14.57-.506-1.159-1.206-2.479-1.628-3.746Z"
-								clip-rule="evenodd" />
+								  d="M24.787 14.406c-1.243-3.737-.716-6.24 1.558-9.725C27.43 3.018 29.302 1.089 30.943 0c6.622 4.264 9.07 12.206 6.635 19.582-1.772 5.367-3.435 7.618-7.64 13.14.49-5.914-1.535-10.014-3.523-14.57-.506-1.159-1.206-2.479-1.628-3.746Z"
+								  clip-rule="evenodd" />
 							<path fill="#7FB93C"
-								d="M28.5 35.904c.047-1.333-.877-2.455-1.8-3.307-2.053-1.895-5.58-3.158-5.58-3.158.362-.607.722-1.36.992-1.965 1.623-3.615 2.525-8.611 2.527-8.618 0-.002 1.005 1.468 1.658 3.038.654 1.57 1.995 4.342 2.31 8.618.092 1.247.186 2.218-.106 5.392Z" />
+								  d="M28.5 35.904c.047-1.333-.877-2.455-1.8-3.307-2.053-1.895-5.58-3.158-5.58-3.158.362-.607.722-1.36.992-1.965 1.623-3.615 2.525-8.611 2.527-8.618 0-.002 1.005 1.468 1.658 3.038.654 1.57 1.995 4.342 2.31 8.618.092 1.247.186 2.218-.106 5.392Z" />
 						</svg>
-						<span class="text-blue">Yii3</span>
+						<span class="text-blue">Yii</span>
 					</div>
 				</div>
 				<div class="testimonials-community-descr">
 					<p>Создавайте производительные и функциональные<br> веб-приложения с уверенностью.</p>
 				</div>
 				<div class="testimonials-community-btn">
-					<a href="#" class="btn btn-gradient">Начать использовать</a>
+					<a href="https://yiisoft.github.io/docs/guide/start/creating-project.html" class="btn btn-gradient">Начать</a>
 				</div>
 			</div>
 
 			<!-- Illustration -->
-			<img class="testimonials-heart" src="./images/heart.svg" alt="Признанный многими фреймворк" />
+			<img class="testimonials-heart" src="./images/heart.svg" alt="Признан многими фреймворками" />
 		</div>
 	</section>
 
@@ -866,28 +1069,33 @@
 		<div class="footer-statictic">
 			<div class="footer-statictic-item">
 				<div class="number">
-					<div class="number-value">14k+</div>
+					<div class="number-value">34k+</div>
 				</div>
 				<div class="heading">
-					<h3 class="heading-title">Звёзд на GitHub</h3>
+					<h3 class="heading-title">Звёзды GitHub</h3>
 					<div class="heading-descr">
 						<p>
-							Это не только показатель качества, но и активная поддержка сообщества, что помогает проекту развиваться и
-							совершенствоваться. Присоединяйтесь и вы!
+							Это общее количество звезд во всех репозиториях в
+							<a href="https://github.com/yiisoft">yiisoft</a>
+							организации.
+							Это не только показатель качества, но и активная поддержка сообщества, которая помогает проекту развиваться и совершенствоваться. Присоединяйтесь к нам тоже!
 						</p>
 					</div>
 				</div>
 			</div>
 			<div class="footer-statictic-item">
 				<div class="number">
-					<div class="number-value">24М+</div>
+					<div class="number-value">33M+</div>
 				</div>
 				<div class="heading">
-					<h3 class="heading-title">Активных установок</h3>
+					<h3 class="heading-title">Количество установок</h3>
 					<div class="heading-descr">
 						<p>
-							Эта огромная цифра говорит сама за себя. Надёжный фреймворк для профессиональной веб-разработки,
-							проверенный тысячами проектов.
+							Это общее количество установок для
+							<a href="https://packagist.org/packages/yiisoft/yii">yiisoft/yii</a>
+							and
+							<a href="https://packagist.org/packages/yiisoft/yii2">yiisoft/yii2</a>
+							пакетов. Это огромное число говорит само за себя. Yii3 — это кульминация нашего 17-летнего опыта.
 						</p>
 					</div>
 				</div>
@@ -895,141 +1103,90 @@
 		</div>
 		<div class="footer-main">
 			<div class="footer-main-col">
-				<h5 class="footer-main-title">About</h5>
+				<h5 class="footer-main-title">Yii 1.1</h5>
 				<ul class="footer-nav">
 					<li>
-						<a href="/doc/guide/2.0/en/intro-yii">About Yii</a>
+						<a href="https://www.yiiframework.com/doc/guide/1.1/">Guide</a>
 					</li>
 					<li>
-						<a href="/news">News</a>
+						<a href="https://www.yiiframework.com/doc/api/1.1">API</a>
 					</li>
 					<li>
-						<a href="/license">License</a>
-					</li>
-					<li>
-						<a href="/contact">Contact Us</a>
+						<a href="https://www.yiiframework.com/wiki?version=1.1">Wiki</a>
 					</li>
 				</ul>
 			</div>
 			<div class="footer-main-col">
-				<h5 class="footer-main-title">Downloads</h5>
+				<h5 class="footer-main-title">Yii2</h5>
 				<ul class="footer-nav">
 					<li>
-						<a href="/download">Framework</a>
+						<a href="https://www.yiiframework.com/doc/guide/2.0/">Guide</a>
 					</li>
 					<li>
-						<a href="/download#offline-documentation">Documentation</a>
+						<a href="https://www.yiiframework.com/doc/api/2.0">API</a>
 					</li>
 					<li>
-						<a href="/extensions">Extensions</a>
-					</li>
-					<li>
-						<a href="/logo">Logo</a>
+						<a href="https://www.yiiframework.com/wiki">Wiki</a>
 					</li>
 				</ul>
 			</div>
 			<div class="footer-main-col">
-				<h5 class="footer-main-title">Documentation</h5>
+				<h5 class="footer-main-title">Yii3</h5>
 				<ul class="footer-nav">
 					<li>
-						<a href="/doc/guide">Guide</a>
+						<a href="https://yiisoft.github.io/docs/guide/">Guide</a>
 					</li>
 					<li>
-						<a href="/doc/api">API</a>
-					</li>
-					<li>
-						<a href="/wiki">Wiki</a>
-					</li>
-					<li>
-						<a href="/resources">Resources</a>
+						<a href="https://yiisoft.github.io/docs/cookbook/">Cookbook</a>
 					</li>
 				</ul>
 			</div>
 			<div class="footer-main-col">
-				<h5 class="footer-main-title">Development</h5>
+				<h5 class="footer-main-title">Сообщество</h5>
 				<ul class="footer-nav">
 					<li>
-						<a href="/contribute">Contribute</a>
+						<a href="https://www.yiiframework.com/community">Все ресурсы</a>
 					</li>
 					<li>
-						<a href="https://github.com/yiisoft/yii2/commits/master" rel="noopener noreferrer" target="_blank">Latest
-							Updates</a>
+						<a href="https://t.me/yii3en" target="_blank" rel="noopener noreferrer">Telegram группа</a>
 					</li>
 					<li>
-						<a href="/report-issue">Report a Bug</a>
-					</li>
-					<li>
-						<a href="/security">Report Security Issue</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-main-col">
-				<h5 class="footer-main-title">Community</h5>
-				<ul class="footer-nav">
-					<li>
-						<a href="/forum">Forum</a>
-					</li>
-					<li>
-						<a href="/chat">Live Chat</a>
-					</li>
-					<li>
-						<a href="https://www.facebook.com/groups/yiitalk/" target="_blank" rel="noopener noreferrer">Facebook
-							Group</a>
-					</li>
-					<li>
-						<a href="/user/halloffame">Hall of Fame</a>
-					</li>
-					<li>
-						<a href="/badges">Badges</a>
+						<a href="https://twitter.com/yiiframework" target="_blank" rel="noopener noreferrer">Twitter</a>
 					</li>
 				</ul>
 			</div>
 			<div class="footer-main-col">
 				<div class="footer-social">
-					<a href="https://github.com/yiisoft" aria-label="GitHub Account" target="_blank" rel="noopener noreferrer">
+					<a href="https://github.com/yiisoft" aria-label="Аккаунт GitHub" target="_blank" rel="noopener noreferrer">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
 							<path
 								d="M10 .248c-5.525 0-10 4.477-10 10a9.998 9.998 0 0 0 6.838 9.487c.5.094.683-.215.683-.48 0-.238-.008-.867-.013-1.7-2.781.603-3.368-1.342-3.368-1.342-.455-1.155-1.112-1.463-1.112-1.463-.906-.62.07-.607.07-.607 1.004.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.913.831.09-.646.347-1.087.633-1.337-2.22-.25-4.555-1.11-4.555-4.942 0-1.092.388-1.983 1.03-2.683-.113-.253-.45-1.27.087-2.647 0 0 .837-.268 2.75 1.025.8-.222 1.65-.332 2.5-.337.85.005 1.7.115 2.5.337 1.9-1.293 2.737-1.025 2.737-1.025.538 1.378.2 2.394.1 2.647.638.7 1.025 1.591 1.025 2.683 0 3.842-2.337 4.688-4.562 4.933.35.3.675.914.675 1.85 0 1.339-.013 2.414-.013 2.739 0 .262.175.575.688.475A9.965 9.965 0 0 0 20 10.248c0-5.523-4.477-10-10-10Z" />
 						</svg>
 					</a>
-					<a href="https://twitter.com/yiiframework" aria-label="Twitter Account" target="_blank"
+					<a href="https://twitter.com/yiiframework" aria-label="Аккаунт Twitter" target="_blank"
 					   rel="noopener noreferrer">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
 							<path
 								d="M15.75.96h3.067l-6.7 7.66L20 19.037h-6.172l-4.833-6.32-5.532 6.32H.395l7.167-8.191L0 .962h6.328l4.37 5.776L15.75.961Zm-1.075 16.243h1.7L5.404 2.7H3.582l11.093 14.503Z" />
 						</svg>
 					</a>
-					<a href="https://www.facebook.com/groups/yiitalk/" aria-label="Facebook Group" target="_blank"
+					<a href="https://t.me/yii3en" aria-label="Telegram" target="_blank"
 					   rel="noopener noreferrer">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
 							<path
-								d="M11.549 20v-9.122h3.06l.46-3.556h-3.52v-2.27c0-1.03.285-1.731 1.762-1.731l1.882-.001V.14A25.512 25.512 0 0 0 12.45 0C9.736 0 7.877 1.657 7.877 4.7v2.622h-3.07v3.556h3.07V20h3.672Z" />
-						</svg>
-					</a>
-					<a href="/rss.xml" aria-label="RSS Feed">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
-							<path
-								d="M3.062 20a2.972 2.972 0 0 0 2.876-3.061 2.965 2.965 0 0 0-2.876-2.877A2.968 2.968 0 0 0 .016 16.94 2.972 2.972 0 0 0 2.892 20h.17Z" />
-							<path
-								d="M9.523 19.416c0 .2-.016.384-.031.584h3.507c0-.2.03-.384.03-.584C12.985 12.6 7.493 7.079.694 7.033c-.2 0-.385.015-.585.03v3.523c.2-.015.385-.03.585-.03 4.86.03 8.783 3.984 8.83 8.86Z" />
-							<path
-								d="M.693.002c-.2 0-.385.031-.585.031V3.54c.2 0 .385-.03.585-.03 8.722.046 15.783 7.137 15.829 15.89 0 .2-.016.385-.031.585h3.492c0-.2.03-.385.03-.585C19.984 8.71 11.354.033.694.002Z" />
+								d="M18.384 2.879 1.413 9.399c-1.159.421-1.152 1.1-.212 1.384l4.357 1.36 10.096-6.37c.476-.289.909-.134.553.184l-8.184 7.391-.306 4.357c.448 0 .646-.206.896-.449l2.151-2.089 4.468 3.301c.825.453 1.418.22 1.623-.766l2.937-13.844c.171-1.414-.593-1.787-1.394-1.4z" />
 						</svg>
 					</a>
 				</div>
 				<ul class="footer-nav">
 					<li>
-						<a href="/tos">Terms of service</a>
+						<a href="https://www.yiiframework.com/">yiiframework.com</a>
 					</li>
 					<li>
-						<a href="/license">License</a>
-					</li>
-					<li>
-						<a href="https://github.com/yiisoft-contrib/yiiframework.com" target="_blank"
-						   rel="noopener noreferrer">Website Source Code</a>
+						<a href="https://www.yiiframework.com/license">License</a>
 					</li>
 				</ul>
-				<div class="footer-main-copyright">&copy; 2008 – 2024 Yii.</div>
+				<div class="footer-main-copyright">&copy; 2008 – 2025 Yii.</div>
 			</div>
 		</div>
 		<div class="footer-madeby">
