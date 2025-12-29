@@ -161,7 +161,14 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 					const hasUnloadedImages = imgs.some((img) => !img.complete)
 					if (hasUnloadedImages) {
-						const onImgLoad = () => rebuild()
+						const pendingImgs = imgs.filter((img) => !img.complete)
+						let remaining = pendingImgs.length
+						const onImgDone = () => {
+							remaining -= 1
+							if (remaining <= 0) {
+								rebuild()
+							}
+						}
 						const onImgError = (event) => {
 							const img = event.currentTarget
 							const item = img?.closest?.("[data-logo-index]")
@@ -170,10 +177,10 @@ document.addEventListener("DOMContentLoaded", () => {
 							if (!Number.isNaN(index)) {
 								activeItemIndices = activeItemIndices.filter((i) => i !== index)
 							}
-							rebuild()
+							onImgDone()
 						}
-						imgs.forEach((img) => {
-							img.addEventListener("load", onImgLoad, { once: true })
+						pendingImgs.forEach((img) => {
+							img.addEventListener("load", onImgDone, { once: true })
 							img.addEventListener("error", onImgError, { once: true })
 						})
 						return
