@@ -1,13 +1,17 @@
 /* Header */
 .header {
-	@apply fixed inset-x-0 top-0 z-header w-full;
+	@apply fixed inset-x-0 top-0 z-header w-full pb-10;
+	background: linear-gradient(to bottom, #fff 20%, transparent);
+	:is(.dark &) {
+		background: linear-gradient(to bottom, #000 20%, transparent);
+	}
 
 	&-inner {
 		@apply relative flex h-16 items-center justify-between gap-x-4 xl:h-24;
 	}
 
 	&-logo {
-		@apply shrink-0 rounded-2xl px-4 py-2 bg-white/90 dark:bg-body/90 transition-transform;
+		@apply shrink-0 px-4 py-2;
 
 		a& {
 			@apply text-black dark:text-white;
