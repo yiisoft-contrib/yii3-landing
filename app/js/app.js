@@ -97,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const marquee = document.querySelector(".companies-logos")
 	if (marquee) {
 		const marqueeContent = marquee.firstElementChild
+		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+		const originalItems = Array.from(marqueeContent?.children || []).map((node) => node.cloneNode(true))
 		let tween
 
 		gsapMedia.add(
@@ -105,28 +107,69 @@ document.addEventListener("DOMContentLoaded", () => {
 				isDesktop: "(min-width: 720px)",
 			},
 			(context) => {
-				let { isMobile, isDesktop } = context.conditions
+				let { isMobile } = context.conditions
 
 				const rebuild = () => {
 					let progress = tween ? tween.progress() : 0
 					tween && tween.progress(0).kill()
+					tween = undefined
 
 					while (marquee.children.length > 1) {
 						marquee.lastElementChild.remove()
 					}
 
 					const track = marqueeContent
-					const originalItems = Array.from(track.children).map((node) => node.cloneNode(true))
-					if (!originalItems.length) {
+					if (!track || !originalItems.length) {
+						return
+					}
+
+					marquee.style.removeProperty("--companies-logo-slot-width")
+
+					if (prefersReducedMotion.matches) {
+						track.innerHTML = ""
+						originalItems.forEach((node) => track.append(node.cloneNode(true)))
+						gsap.set(track, { x: 0, clearProps: "willChange" })
 						return
 					}
 
 					track.innerHTML = ""
 					originalItems.forEach((node) => track.append(node.cloneNode(true)))
 
+					const imgs = Array.from(track.querySelectorAll("img"))
+					const hasUnloadedImages = imgs.some((img) => !img.complete)
+					if (hasUnloadedImages) {
+						const onImgLoad = () => rebuild()
+						imgs.forEach((img) => img.addEventListener("load", onImgLoad, { once: true }))
+						return
+					}
+					originalItems.forEach((node) => track.append(node.cloneNode(true)))
+
+					let maxLogoWidth = 0
+					for (const item of Array.from(track.children)) {
+						const img = item.querySelector("img")
+						const width = img?.getBoundingClientRect().width || item.getBoundingClientRect().width
+						if (width > maxLogoWidth) {
+							maxLogoWidth = width
+						}
+					}
+					if (maxLogoWidth) {
+						const dpr = window.devicePixelRatio || 1
+						const slotWidth = Math.round(maxLogoWidth * dpr) / dpr
+						marquee.style.setProperty("--companies-logo-slot-width", `${slotWidth}px`)
+					}
+
+					const firstItem = track.children[0]
+					const secondSetFirstItem = track.children[originalItems.length]
+					const rawLoopDistance =
+						secondSetFirstItem && firstItem
+							? secondSetFirstItem.offsetLeft - firstItem.offsetLeft
+							: track.scrollWidth
+
 					const dpr = window.devicePixelRatio || 1
-					const baseWidth = Math.round(track.scrollWidth * dpr) / dpr
-					const loopDistance = baseWidth
+					const loopDistance = Math.round(rawLoopDistance * dpr) / dpr
+					if (!loopDistance) {
+						return
+					}
 
 					const containerWidth = marquee.getBoundingClientRect().width
 					const minTotalWidth = Math.max(loopDistance * 2, containerWidth * 2)
@@ -137,10 +180,12 @@ document.addEventListener("DOMContentLoaded", () => {
 					const wrapX = gsap.utils.wrap(-loopDistance, 0)
 					const snapX = gsap.utils.snap(1 / dpr)
 					gsap.set(track, { x: 0, force3D: true })
+					const pxPerSecond = isMobile ? 20 : 30
+					const duration = loopDistance / pxPerSecond
 
 					tween = gsap.to(track, {
 						x: `-=${loopDistance}`,
-						duration: isMobile ? 35 : 80,
+						duration,
 						ease: "none",
 						invalidateOnRefresh: true,
 						repeat: -1,
@@ -155,11 +200,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				const onLoad = () => rebuild()
 				const onResize = () => rebuild()
+				const onMotionChange = () => rebuild()
 				window.addEventListener("load", onLoad, { once: true })
 				window.addEventListener("resize", onResize)
+				prefersReducedMotion.addEventListener("change", onMotionChange)
 
 				return () => {
 					window.removeEventListener("resize", onResize)
+					prefersReducedMotion.removeEventListener("change", onMotionChange)
 				}
 			},
 		)
