@@ -95,30 +95,75 @@ document.addEventListener("DOMContentLoaded", () => {
 	/* Logos Marquee */
 	let gsapMedia = gsap.matchMedia()
 	const marquee = document.querySelector(".companies-logos")
-	const marqueeContent = marquee.firstElementChild
-	const marqueeContentClone = marqueeContent.cloneNode(true)
-	marquee.append(marqueeContentClone)
+	if (marquee) {
+		const marqueeContent = marquee.firstElementChild
+		let tween
 
-	let tween
+		gsapMedia.add(
+			{
+				isMobile: "(max-width: 719px)",
+				isDesktop: "(min-width: 720px)",
+			},
+			(context) => {
+				let { isMobile, isDesktop } = context.conditions
 
-	gsapMedia.add(
-		{
-			isMobile: "(max-width: 719px)",
-			isDesktop: "(min-width: 720px)",
-		},
-		(context) => {
-			let { isMobile, isDesktop } = context.conditions
+				const rebuild = () => {
+					let progress = tween ? tween.progress() : 0
+					tween && tween.progress(0).kill()
 
-			let progress = tween ? tween.progress() : 0
-			tween && tween.progress(0).kill()
-			const width = parseInt(getComputedStyle(marqueeContent).getPropertyValue("width"), 10)
-			const gap = parseInt(getComputedStyle(marqueeContent).getPropertyValue("columnGap"), 10) || 32
-			const distanceToTranslate = -1 * (gap + width)
+					while (marquee.children.length > 1) {
+						marquee.lastElementChild.remove()
+					}
 
-			tween = gsap.fromTo(marquee.children, { x: 0 }, { x: distanceToTranslate, duration: isMobile ? 15 : 30, ease: "none", repeat: -1 })
-			tween.progress(progress)
-		},
-	)
+					const track = marqueeContent
+					const originalItems = Array.from(track.children).map((node) => node.cloneNode(true))
+					if (!originalItems.length) {
+						return
+					}
+
+					track.innerHTML = ""
+					originalItems.forEach((node) => track.append(node.cloneNode(true)))
+
+					const dpr = window.devicePixelRatio || 1
+					const baseWidth = Math.round(track.scrollWidth * dpr) / dpr
+					const loopDistance = baseWidth
+
+					const containerWidth = marquee.getBoundingClientRect().width
+					const minTotalWidth = Math.max(loopDistance * 2, containerWidth * 2)
+					while (track.scrollWidth < minTotalWidth) {
+						originalItems.forEach((node) => track.append(node.cloneNode(true)))
+					}
+
+					const wrapX = gsap.utils.wrap(-loopDistance, 0)
+					const snapX = gsap.utils.snap(1 / dpr)
+					gsap.set(track, { x: 0, force3D: true })
+
+					tween = gsap.to(track, {
+						x: `-=${loopDistance}`,
+						duration: isMobile ? 35 : 80,
+						ease: "none",
+						invalidateOnRefresh: true,
+						repeat: -1,
+						modifiers: {
+							x: (x) => `${snapX(wrapX(parseFloat(x)))}px`,
+						},
+					})
+					tween.progress(progress)
+				}
+
+				rebuild()
+
+				const onLoad = () => rebuild()
+				const onResize = () => rebuild()
+				window.addEventListener("load", onLoad, { once: true })
+				window.addEventListener("resize", onResize)
+
+				return () => {
+					window.removeEventListener("resize", onResize)
+				}
+			},
+		)
+	}
 
 	/* Circles animation */
 	gsap.from("#svg-circles path", {
