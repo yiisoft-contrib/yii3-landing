@@ -1,6 +1,6 @@
 /* Import Swiper */
 import Swiper from "swiper"
-import { Autoplay, Pagination, Controller, Scrollbar, EffectFade } from "swiper/modules"
+import { Pagination, Controller, Scrollbar, EffectFade } from "swiper/modules"
 
 /* Import Alpine.js */
 import Alpine from "alpinejs"
@@ -342,15 +342,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		featuresInited = true
 
 		featuresContentSwiper = new Swiper(".features-content", {
-			modules: [EffectFade, Autoplay, Pagination, Controller],
+			modules: [EffectFade, Pagination, Controller],
 			slidesPerView: 1,
 			spaceBetween: 32,
 			autoHeight: true,
-			autoplay: {
-				delay: 5000,
-				pauseOnMouseEnter: true,
-				disableOnInteraction: true,
-			},
 			allowTouchMove: false,
 			effect: "fade",
 			fadeEffect: {
@@ -361,7 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				type: "bullets",
 				clickable: true,
 				renderBullet: function (index, className) {
-					const autoplayDelay = this?.passedParams?.autoplay?.delay || 0
+					const autoplayDelay = 0
 					const featureTitle = this.slides[index].dataset.featureTitle || ""
 					const featureDescription = this.slides[index].dataset.featureDescription || ""
 
@@ -376,17 +371,6 @@ document.addEventListener("DOMContentLoaded", () => {
 							</div>
 						</div>
 					</div>`
-				},
-			},
-			on: {
-				autoplayPause: function (swiper) {
-					swiper.pagination.bullets[swiper.realIndex].classList.add("_is-paused")
-				},
-				autoplayResume: function (swiper) {
-					swiper.pagination.bullets[swiper.realIndex].classList.remove("_is-paused")
-				},
-				autoplayStop: function (swiper) {
-					swiper.pagination.el.classList.add("_is-stopped")
 				},
 			},
 		})
@@ -409,12 +393,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		featuresContentSwiper.controller.control = featuresTabsSwiper
 		featuresTabsSwiper.controller.control = featuresContentSwiper
-
-		if (isMobile()) {
-			featuresContentSwiper.autoplay.stop()
-		} else {
-			featuresContentSwiper.autoplay.start()
-		}
 	}
 
 	const featuresSection = document.querySelector(".features")
