@@ -2,9 +2,6 @@
 import Swiper from "swiper"
 import { Autoplay, Pagination, Controller, Scrollbar, EffectFade } from "swiper/modules"
 
-/* Import main CSS */
-// import("../css/app.css")
-
 /* Import Alpine.js */
 import Alpine from "alpinejs"
 import persist from "@alpinejs/persist"
@@ -301,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			renderBullet: function (index, className) {
 				const autoplayDelay = this?.passedParams?.autoplay?.delay || 0
 				const featureTitle = this.slides[index].dataset.featureTitle || ""
-				const featureDescr = this.slides[index].dataset.featureDescription || ""
+				const featureDescription = this.slides[index].dataset.featureDescription || ""
 
 				return `<div class="${className}" style="--animation-duration: ${autoplayDelay}ms">
 					<div class="features-nav-item">
@@ -310,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						</div>
 						<div class="heading">
 							<h5 class="heading-title">${featureTitle}</h5>
-							<p class="heading-descr">${featureDescr}</p>
+							<p class="heading-descr">${featureDescription}</p>
 						</div>
 					</div>
 				</div>`
