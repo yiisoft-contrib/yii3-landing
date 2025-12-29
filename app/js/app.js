@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const marqueeContent = marquee.firstElementChild
 		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
 		const originalItems = Array.from(marqueeContent?.children || []).map((node) => node.cloneNode(true))
+		let activeItemIndices = originalItems.map((_, index) => index)
 		let tween
 
 		gsapMedia.add(
@@ -119,30 +120,68 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 
 					const track = marqueeContent
-					if (!track || !originalItems.length) {
+					if (!track || !originalItems.length || !activeItemIndices.length) {
+						track && (track.innerHTML = "")
+						gsap.set(track, { x: 0, clearProps: "willChange" })
 						return
+					}
+
+					const appendActiveItems = () => {
+						activeItemIndices.forEach((index) => {
+							const node = originalItems[index].cloneNode(true)
+							if (node && node.dataset) {
+								node.dataset.logoIndex = String(index)
+							}
+							track.append(node)
+						})
 					}
 
 					marquee.style.removeProperty("--companies-logo-slot-width")
 
 					if (prefersReducedMotion.matches) {
 						track.innerHTML = ""
-						originalItems.forEach((node) => track.append(node.cloneNode(true)))
+						appendActiveItems()
 						gsap.set(track, { x: 0, clearProps: "willChange" })
 						return
 					}
 
 					track.innerHTML = ""
-					originalItems.forEach((node) => track.append(node.cloneNode(true)))
+					appendActiveItems()
 
 					const imgs = Array.from(track.querySelectorAll("img"))
+					const brokenImgs = imgs.filter((img) => img.complete && img.naturalWidth === 0)
+					if (brokenImgs.length) {
+						brokenImgs.forEach((img) => {
+							const item = img?.closest?.("[data-logo-index]")
+							const indexStr = item?.dataset?.logoIndex
+							const index = indexStr != null ? Number(indexStr) : NaN
+							if (!Number.isNaN(index)) {
+								activeItemIndices = activeItemIndices.filter((i) => i !== index)
+							}
+						})
+						rebuild()
+						return
+					}
 					const hasUnloadedImages = imgs.some((img) => !img.complete)
 					if (hasUnloadedImages) {
 						const onImgLoad = () => rebuild()
-						imgs.forEach((img) => img.addEventListener("load", onImgLoad, { once: true }))
+						const onImgError = (event) => {
+							const img = event.currentTarget
+							const item = img?.closest?.("[data-logo-index]")
+							const indexStr = item?.dataset?.logoIndex
+							const index = indexStr != null ? Number(indexStr) : NaN
+							if (!Number.isNaN(index)) {
+								activeItemIndices = activeItemIndices.filter((i) => i !== index)
+							}
+							rebuild()
+						}
+						imgs.forEach((img) => {
+							img.addEventListener("load", onImgLoad, { once: true })
+							img.addEventListener("error", onImgError, { once: true })
+						})
 						return
 					}
-					originalItems.forEach((node) => track.append(node.cloneNode(true)))
+					appendActiveItems()
 
 					let maxLogoWidth = 0
 					for (const item of Array.from(track.children)) {
