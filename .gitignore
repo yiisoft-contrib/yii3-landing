@@ -3,8 +3,4 @@
 /**/Thumbs.db
 /**/*.DS_Store
 /**/debug.log
-/**/yarn.lock
-/**/yarn-error.log
-/**/package-lock.json
-/**/*.zip
-/**/*.rar
+/public
